@@ -11,6 +11,12 @@ Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindARoute.Desktop", "..\Fi
 EndProject
 Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindARoute.iOS", "..\FindARoute.iOS\FindARoute.iOS.csproj", "{E45EA4BE-4A15-4017-A8C6-9FBC22F831B8}"
 EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "WifiScannerLib", "..\..\WifiFinder\WifiScannerTri\WifiScanner\WifiScannerLib.csproj", "{D8E83DD3-9827-4CD4-874A-3C4B03044A39}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavGraph", "..\..\NavGraph\NavGraph\NavGraph.csproj", "{93B84262-41CD-4E03-B5AA-EFEAD493BD11}"
+EndProject
+Project("{2150E333-8FDC-42A3-9474-1A3956D46DE8}") = "Lib", "Lib", "{BF740E42-13C5-45B6-A298-0934908BBBCE}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -37,9 +43,21 @@ Global
 		{E45EA4BE-4A15-4017-A8C6-9FBC22F831B8}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{E45EA4BE-4A15-4017-A8C6-9FBC22F831B8}.Release|Any CPU.Build.0 = Release|Any CPU
 		{E45EA4BE-4A15-4017-A8C6-9FBC22F831B8}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D8E83DD3-9827-4CD4-874A-3C4B03044A39}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D8E83DD3-9827-4CD4-874A-3C4B03044A39}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D8E83DD3-9827-4CD4-874A-3C4B03044A39}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D8E83DD3-9827-4CD4-874A-3C4B03044A39}.Release|Any CPU.Build.0 = Release|Any CPU
+		{93B84262-41CD-4E03-B5AA-EFEAD493BD11}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{93B84262-41CD-4E03-B5AA-EFEAD493BD11}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{93B84262-41CD-4E03-B5AA-EFEAD493BD11}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{93B84262-41CD-4E03-B5AA-EFEAD493BD11}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(NestedProjects) = preSolution
+		{D8E83DD3-9827-4CD4-874A-3C4B03044A39} = {BF740E42-13C5-45B6-A298-0934908BBBCE}
+		{93B84262-41CD-4E03-B5AA-EFEAD493BD11} = {BF740E42-13C5-45B6-A298-0934908BBBCE}
 	EndGlobalSection
 	GlobalSection(ExtensibilityGlobals) = postSolution
 		SolutionGuid = {7E4AB32F-EF56-4D97-978B-0174C0959B78}
