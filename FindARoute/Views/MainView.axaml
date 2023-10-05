@@ -3,14 +3,34 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FindARoute.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
+             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
              x:Class="FindARoute.Views.MainView"
              x:DataType="vm:MainViewModel">
-  <Design.DataContext>
-    <!-- This only sets the DataContext for the previewer in an IDE,
-         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
-    <vm:MainViewModel />
-  </Design.DataContext>
+	<UserControl.Resources>
+		<Bitmap x:Key="Logo">
+			
+		</Bitmap>
+		
+	</UserControl.Resources>
 
-  <TextBlock Text="Placeholder" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+	<Design.DataContext>
+		<!-- This only sets the DataContext for the previewer in an IDE,
+        to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+		<vm:MainViewModel />
+	</Design.DataContext>
+
+
+
+	<StackPanel x:Name="STKPNL_Main" Background="Orange">
+		<StackPanel x:Name="STKPNL_Header" Orientation="Horizontal" Background="Yellow">
+			<StackPanel x:Name="STKPNL_AppName" Orientation="Horizontal" Margin="5" Background="Blue">
+				<TextBlock Text="FindARoute"/>
+				<Image Source="{DynamicResource ResourceKey=Logo.png}"	/>
+			</StackPanel>
+		</StackPanel>
+
+
+	</StackPanel>
+
+
 </UserControl>
