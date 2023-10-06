@@ -22,7 +22,7 @@
 
   <ItemGroup>
     <ProjectReference Include="..\..\NavGraph\NavGraph\NavGraph.csproj" />
-    <ProjectReference Include="..\..\WifiFinder\WifiScannerTri\WifiScanner\WifiScannerLib.csproj" />
+    <ProjectReference Include="..\..\WifiFinder-Main\WifiFinder\WifiScannerLib\WifiScannerLib.csproj" />
   </ItemGroup>
 
   <ItemGroup>
