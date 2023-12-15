@@ -1,9 +1,9 @@
 ﻿using Avalonia;
 using Avalonia.Controls.ApplicationLifetimes;
 using Avalonia.Markup.Xaml;
-
 using FindARoute.ViewModels;
 using FindARoute.Views;
+using System.Globalization;
 
 namespace FindARoute;
 
@@ -16,6 +16,8 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
+        Properties.Resources.Culture = new CultureInfo("cy-gb");
+
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {
             desktop.MainWindow = new MainWindow

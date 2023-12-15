@@ -19,8 +19,8 @@
 		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Left">
 			<DockPanel Background="Aquamarine" Margin="0,8,8,8">
 				<DockPanel DockPanel.Dock="Top" Background="Bisque">
-					<TextBlock Margin="5,0,0,0" VerticalAlignment="Center" Text="Destination" FontSize="20"
-						DockPanel.Dock="Left"/>
+					<TextBlock Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20"
+						DockPanel.Dock="Left" Text="{}"/>
 					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
 						DockPanel.Dock="Right" Tag="Destination"/>
 				</DockPanel>

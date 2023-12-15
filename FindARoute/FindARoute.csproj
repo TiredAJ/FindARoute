@@ -8,8 +8,10 @@
 
   
   <ItemGroup>
-	  <AvaloniaResource Include="Assets\**"/>
-	  <AvaloniaResource Include="Assets\Logo.ico"/>
+	  <AvaloniaResource Include="Assets\**" />
+	  <AvaloniaResource Include="Assets\Logo.ico" />
+	  <Resource Include="Properties\Localisations\cy-gb.resx" />
+	  <AvaloniaResource Include="Properties\Localisations\en-gb.resx" />
   </ItemGroup>
 
   <ItemGroup>
