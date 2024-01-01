@@ -1,6 +1,6 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Media.Imaging;
-using System.Diagnostics;
+using MsBox.Avalonia;
 using System.Globalization;
 using System.IO;
 
@@ -18,22 +18,33 @@ public partial class MainView : UserControl
 
         GenerateImage(Properties.Resources.LocateMe, IMG_BTN_LocateMe);
 
-        btn_Lanuage.Click += Btn_Lanuage_Click;
+        btn_Language.Click += Btn_Language_Click;
 
-        Debug.WriteLine(Properties.Resources.Culture.DisplayName);
+        Popup("Language", $"Language:");
     }
 
-    private void Btn_Lanuage_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
+    private void Btn_Language_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
+        //https://azuliadesigns.com/c-sharp-tutorials/list-net-culture-country-codes/
+
         if (Properties.Resources.Culture.Name == "cy-GB")
         { Properties.Resources.Culture = new CultureInfo("en-GB"); }
         else
         { Properties.Resources.Culture = new CultureInfo("cy-GB"); }
+
+        Popup("Language", $"Language now:");
     }
 
     public void GenerateImage(byte[] _Data, Image _Ctrl)
     {
         using (Stream S = new MemoryStream(_Data))
         { _Ctrl.Source = new Bitmap(S); }
+    }
+
+    public static async void Popup(string _Title, string _Content)
+    {
+        var Pop = MessageBoxManager.GetMessageBoxStandard(_Title, _Content);
+
+        var R = await Pop.ShowAsync();
     }
 }

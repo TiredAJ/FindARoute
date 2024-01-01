@@ -21,7 +21,7 @@
 			<Image x:Name="IMG_Logo" Margin="2" Stretch="Fill" MaxHeight="80" MaxWidth="80" 
 				DockPanel.Dock="Left" Width="60" Height="60"/>
 
-			<Button x:Name="btn_Lanuage" HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
+			<Button x:Name="btn_Language" HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
 				Background="AliceBlue" Width="50" Height="50">
 				<TextBlock Text="{Binding Language}" FontStyle="Oblique"/>
 			</Button>
