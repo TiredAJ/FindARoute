@@ -1,6 +1,5 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Media.Imaging;
-using MsBox.Avalonia;
 using System.Globalization;
 using System.IO;
 
@@ -43,8 +42,8 @@ public partial class MainView : UserControl
 
     public static async void Popup(string _Title, string _Content)
     {
-        var Pop = MessageBoxManager.GetMessageBoxStandard(_Title, _Content);
+        //var Pop = MessageBoxManager.GetMessageBoxStandard(_Title, _Content);
 
-        var R = await Pop.ShowAsync();
+        //var R = await Pop.ShowAsync();
     }
 }
