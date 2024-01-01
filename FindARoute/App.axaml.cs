@@ -16,7 +16,8 @@ public partial class App : Application
 
     public override void OnFrameworkInitializationCompleted()
     {
-        Properties.Resources.Culture = new CultureInfo("cy-gb");
+        if (Properties.Resources.Culture == null)
+        { Properties.Resources.Culture = new CultureInfo("cy-gb"); }
 
         if (ApplicationLifetime is IClassicDesktopStyleApplicationLifetime desktop)
         {

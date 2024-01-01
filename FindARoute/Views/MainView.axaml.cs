@@ -1,5 +1,7 @@
 ﻿using Avalonia.Controls;
 using Avalonia.Media.Imaging;
+using FindARoute.Utilities;
+using System.Diagnostics;
 using System.Globalization;
 using System.IO;
 
@@ -20,7 +22,12 @@ public partial class MainView : UserControl
         btn_Language.Click += Btn_Language_Click;
 
         Popup("Language", $"Language:");
+
+        this.Initialized += MainView_Initialized;
     }
+
+    private void MainView_Initialized(object? sender, System.EventArgs e)
+    { Settings.Load(TopLevel.GetTopLevel(PNL_Origin).StorageProvider); }
 
     private void Btn_Language_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {
@@ -31,7 +38,7 @@ public partial class MainView : UserControl
         else
         { Properties.Resources.Culture = new CultureInfo("cy-GB"); }
 
-        Popup("Language", $"Language now:");
+        Popup("Language", $"Language now: {Properties.Resources.Culture.Name}");
     }
 
     public void GenerateImage(byte[] _Data, Image _Ctrl)
@@ -42,6 +49,8 @@ public partial class MainView : UserControl
 
     public static async void Popup(string _Title, string _Content)
     {
+        Debug.WriteLine($"{_Title}: {_Content}");
+
         //var Pop = MessageBoxManager.GetMessageBoxStandard(_Title, _Content);
 
         //var R = await Pop.ShowAsync();
