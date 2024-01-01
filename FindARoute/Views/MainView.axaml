@@ -3,24 +3,35 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FindARoute.ViewModels"
+			 xmlns:P="clr-namespace:FindARoute.Properties"
              mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
              x:Class="FindARoute.Views.MainView"
              x:DataType="vm:MainViewModel">
+
+	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="TextAlignment" Value="DetectFromContent"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+		</Style>
+	</UserControl.Styles>
 
 	<StackPanel x:Name="STKPNL_Main" Background="Orange">
 		<DockPanel x:Name="DKPNL_Header" Background="Yellow">
 			<Image x:Name="IMG_Logo" Margin="2" Stretch="Fill" MaxHeight="80" MaxWidth="80" 
 				DockPanel.Dock="Left" Width="60" Height="60"/>
 
-			<Button HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
-				Content="{Binding Language}" Background="AliceBlue" Width="50" Height="50" FontStyle="Oblique"/>			
+			<Button x:Name="btn_Lanuage" HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
+				Background="AliceBlue" Width="50" Height="50">
+				<TextBlock Text="{Binding Language}" FontStyle="Oblique"/>
+			</Button>
 		</DockPanel>
 
 		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Left">
 			<DockPanel Background="Aquamarine" Margin="0,8,8,8">
 				<DockPanel DockPanel.Dock="Top" Background="Bisque">
 					<TextBlock Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20"
-						DockPanel.Dock="Left" Text="{}"/>
+						DockPanel.Dock="Left" Text="{x:Static P:Resources.Destination}"/>
 					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
 						DockPanel.Dock="Right" Tag="Destination"/>
 				</DockPanel>

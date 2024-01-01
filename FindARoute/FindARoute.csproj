@@ -10,8 +10,6 @@
   <ItemGroup>
 	  <AvaloniaResource Include="Assets\**" />
 	  <AvaloniaResource Include="Assets\Logo.ico" />
-	  <Resource Include="Properties\Localisations\cy-gb.resx" />
-	  <AvaloniaResource Include="Properties\Localisations\en-gb.resx" />
   </ItemGroup>
 
   <ItemGroup>
@@ -29,6 +27,11 @@
   </ItemGroup>
 
   <ItemGroup>
+    <Compile Update="Properties\Resources.cy-gb.Designer.cs">
+      <DesignTime>True</DesignTime>
+      <AutoGen>True</AutoGen>
+      <DependentUpon>Resources.cy-GB.resx</DependentUpon>
+    </Compile>
     <Compile Update="Properties\Resources.Designer.cs">
       <DesignTime>True</DesignTime>
       <AutoGen>True</AutoGen>
@@ -37,6 +40,10 @@
   </ItemGroup>
 
   <ItemGroup>
+    <EmbeddedResource Update="Properties\Resources.cy-gb.resx">
+      <Generator>PublicResXFileCodeGenerator</Generator>
+      <LastGenOutput>Resources.cy-gb.Designer.cs</LastGenOutput>
+    </EmbeddedResource>
     <EmbeddedResource Update="Properties\Resources.resx">
       <Generator>PublicResXFileCodeGenerator</Generator>
       <LastGenOutput>Resources.Designer.cs</LastGenOutput>

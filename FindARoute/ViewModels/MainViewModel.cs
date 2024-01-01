@@ -3,7 +3,7 @@
 public class MainViewModel : ViewModelBase
 {
     public string Greeting => "Welcome to Avalonia!";
-    public string Language => "English";
+    public string Language => Properties.Resources.Culture.DisplayName;
 
     public bool DestinationCMBX = true;
     public bool OriginCMBX = true;
