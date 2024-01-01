@@ -1,0 +1,26 @@
+﻿[01] Change Language			- 
+[02] Destination				- Cyrchfan
+[03] Origin						- 
+[04] Type to search...			- 
+[05] Find a route				- 
+[06] Navigating to: #			- 
+[07] Continue Forward [&]		- 
+[08]	until [#]				- 
+[09]	then [#]				- 
+[10] Turn [&]					- 
+[11] 	Left					- 
+[12] 	Right					- 
+[13] Return						- 
+[14] Locate me					- 
+[15] Re-locate me				- 
+[16] No results found for input	- 
+[17] WiFi Positioning
+[18] This app uses wiFi to determine your position while the app is open. - 
+[19] The only data saved is your last inputted locations. -
+[20] No data is shared			-
+[21] The app is useable without this though. - 
+[22] If you would like to use wiFi positioning, please turn on
+	 location and allow the location permission in app settings - 
+[23]	Use WiFi Positioning	-
+[24]	Don't use WiFi Positioning	- 
+[25] Room Name					- 
