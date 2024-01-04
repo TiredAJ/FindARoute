@@ -18,7 +18,7 @@ namespace FindARoute.Utilities
         public static void Load(IStorageProvider _ISP)
         {
             if (!_ISP.CanOpen)
-            { throw new System.Exception("Darn thing won't let me save!"); }
+            { /*throw new System.Exception("Darn thing won't let me save!");*/ }
 
 
         }

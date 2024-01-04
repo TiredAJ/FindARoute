@@ -9,25 +9,32 @@ namespace FindARoute.Views;
 
 public partial class MainView : UserControl
 {
+    int InitCount = 0;
+
     public MainView()
     {
         InitializeComponent();
 
         //Debug.WriteLine(Path.GetFullPath(Directory.GetCurrentDirectory() + "/Assets/Logo.png"));
 
-        GenerateImage(Properties.Resources.LogoPng, IMG_Logo);
+        GenerateImage(Properties.Resources.img_Logo, IMG_Logo);
 
-        GenerateImage(Properties.Resources.LocateMe, IMG_BTN_LocateMe);
+        GenerateImage(Properties.Resources.img_LocateMe, IMG_BTN_LocateMe);
 
         btn_Language.Click += Btn_Language_Click;
 
         Popup("Language", $"Language:");
 
-        this.Initialized += MainView_Initialized;
+        btn_Language.Initialized += Initialized;
     }
 
-    private void MainView_Initialized(object? sender, System.EventArgs e)
-    { Settings.Load(TopLevel.GetTopLevel(PNL_Origin).StorageProvider); }
+    private void Initialized(object? sender, System.EventArgs e)
+    {
+        var Temp = TopLevel.GetTopLevel(btn_Language);
+
+        if (Temp != null)
+        { Settings.Load(Temp.StorageProvider); }
+    }
 
     private void Btn_Language_Click(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
     {

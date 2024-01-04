@@ -6,21 +6,20 @@
 [06] Title showing the user where the app is currently navigating to "Navigating to: J113"
 [07] Command to user to continue forward, connected to one of the modules [08]-[10]
 [08]	forward until something
-[09]	forward then do something (like [10] & [11] or [12])
-[10] Command to the user to turn a direction (either [11] or [12])
-[11]	Leftwards direction, relative to user
-[12]	Rightwards direction, relative to user
-[13] Label for button that takes the user back to the home menu
-[14] Label above button that attempts to determine the user's current position
-[15] Label above button that re-attempts to determine the user's current position
-[16] Error message to user that the app can't work out what location the user has inputted
-[17] A feature of the app where WiFi is used to get the position of the user on campus (think GPS, but wifi)
-[18] This is a popup shown to the user on start up explaining why the app asks for location permissions.
-[19] It also explains that no data is shared, and that the data saved isn't personal data
-[20] only the last few locations they've tried to navigate to
-[21] ^
-[22] Second popup asking the user for their decision about the location feature with 2 buttons ([23] & [24])
+[09]	forward then do something (like [10] or [11])
+[10] Command to the user to turn Leftwards, relative to user
+[11] Command to the user to turn Rightwards, relative to user
+[12] Label for button that takes the user back to the home menu
+[13] Label above button that attempts to determine the user's current position
+[14] Label above button that re-attempts to determine the user's current position
+[15] Error message to user that the app can't work out what location the user has inputted
+[16] A feature of the app where WiFi is used to get the position of the user on campus (think GPS, but wifi)
+[17] This is a popup shown to the user on start up explaining why the app asks for location permissions.
+[18] It also explains that no data is shared, and that the data saved isn't personal data
+[19] only the last few locations they've tried to navigate to
+[20] ^
+[21] Second popup asking the user for their decision about the location feature with 2 buttons ([22] & [23])
 
-[23]	Option for the app to use the Positioning feature
-[24]	Option for the app to not use the positioning feature 
-[25] Label in a textbox prompting the user to enter the name of the roomn they want to navigate from or to
+[22]	Option for the app to use the Positioning feature
+[23]	Option for the app to not use the positioning feature 
+[24] Label in a textbox prompting the user to enter the name of the roomn they want to navigate from or to

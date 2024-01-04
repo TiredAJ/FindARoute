@@ -117,7 +117,92 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
+  <data name="Change_Lang" xml:space="preserve">
+    <value>Newid Iaith</value>
+    <comment>a</comment>
+  </data>
+  <data name="ContinueForward" xml:space="preserve">
+    <value>Parhau ymlaen </value>
+    <comment>g</comment>
+  </data>
   <data name="Destination" xml:space="preserve">
     <value>Cyrchfan</value>
+    <comment>b</comment>
+  </data>
+  <data name="FindRoute" xml:space="preserve">
+    <value>Darganfod llwybr</value>
+    <comment>e</comment>
+  </data>
+  <data name="InitPopup" xml:space="preserve">
+    <value>Mae'r meddalwedd hwn defnyddio WiFi I pennu ei lleoliad pan defnyddio'r meddalwedd. Yr unrhyw data I gadw bydd y chwilion olaf. bydd dim rhannu data a gall't ti defnyddio'r meddalwedd heb hwn.</value>
+    <comment>q</comment>
+  </data>
+  <data name="LocateMe" xml:space="preserve">
+    <value>Lleoli fi</value>
+    <comment>m</comment>
+  </data>
+  <data name="NavingTo" xml:space="preserve">
+    <value>Mordwyo I: </value>
+    <comment>f</comment>
+  </data>
+  <data name="NoResults" xml:space="preserve">
+    <value>Does dim mesurebau gyfer mewnbwn</value>
+    <comment>o</comment>
+  </data>
+  <data name="Origin" xml:space="preserve">
+    <value>Tarddiad</value>
+    <comment>c</comment>
+  </data>
+  <data name="ReLocateMe" xml:space="preserve">
+    <value>Ad-lleoli fi</value>
+    <comment>n</comment>
+  </data>
+  <data name="Return" xml:space="preserve">
+    <value>Dychweld</value>
+    <comment>l</comment>
+  </data>
+  <data name="RoomName" xml:space="preserve">
+    <value> Enw ystafell</value>
+    <comment>u</comment>
+  </data>
+  <data name="String2" xml:space="preserve">
+    <value>Cyfordd</value>
+    <comment>v</comment>
+  </data>
+  <data name="Then" xml:space="preserve">
+    <value>, then </value>
+    <comment>i</comment>
+  </data>
+  <data name="TogglePopup" xml:space="preserve">
+    <value>Os hoffet ti defnyddio [?] WiFi, gall't troi "Lleoliad" a caniatáu caniatâd "Lleoliad" mewn gosodiadau meddalwedd. Gall't newid hyn yn gosodiadau mewn-meddalwedd.</value>
+    <comment>r</comment>
+  </data>
+  <data name="TogglePopup_No" xml:space="preserve">
+    <value>Peidiwch defnyddio [?] WiFi</value>
+    <comment>t</comment>
+  </data>
+  <data name="TogglePopup_Yes" xml:space="preserve">
+    <value>Defnyddio [?] WiFi</value>
+    <comment>s</comment>
+  </data>
+  <data name="TurnLeft" xml:space="preserve">
+    <value>Troi chwith</value>
+    <comment>j</comment>
+  </data>
+  <data name="TurnRight" xml:space="preserve">
+    <value>Troi de</value>
+    <comment>k</comment>
+  </data>
+  <data name="TypeHere" xml:space="preserve">
+    <value>Teipiwch I chilio...</value>
+    <comment>d</comment>
+  </data>
+  <data name="Until" xml:space="preserve">
+    <value>tan </value>
+    <comment>h</comment>
+  </data>
+  <data name="WiFiPos" xml:space="preserve">
+    <value>[?] WiFi</value>
+    <comment>p</comment>
   </data>
 </root>

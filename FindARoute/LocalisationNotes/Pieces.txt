@@ -1,26 +1,31 @@
-﻿[01] Change Language			- 
-[02] Destination				- Cyrchfan
-[03] Origin						- 
-[04] Type to search...			- 
-[05] Find a route				- 
-[06] Navigating to: #			- 
-[07] Continue Forward [&]		- 
-[08]	until [#]				- 
-[09]	then [#]				- 
-[10] Turn [&]					- 
-[11] 	Left					- 
-[12] 	Right					- 
-[13] Return						- 
-[14] Locate me					- 
-[15] Re-locate me				- 
-[16] No results found for input	- 
-[17] WiFi Positioning
-[18] This app uses wiFi to determine your position while the app is open. - 
-[19] The only data saved is your last inputted locations. -
-[20] No data is shared			-
-[21] The app is useable without this though. - 
-[22] If you would like to use wiFi positioning, please turn on
-	 location and allow the location permission in app settings - 
-[23]	Use WiFi Positioning	-
-[24]	Don't use WiFi Positioning	- 
-[25] Room Name					- 
+﻿[01] Change Language -	Newid Iaith
+[02] Destination	 - 	Cyrchfan
+[03] Origin			 - 	Tarddiad
+[04] Type to search...		- 	Teipio I chwilio... / Teipiwch I chwilio...
+[05] Find a route			- 	Darganfod llwybr
+[06] Navigating to: #		- 	Mordwyo I: #
+[07] Continue Forward [&]	- 	Parhau ymlaen
+[08]	until [#]			- 	tan [#] / hyd [#]
+[09]	, then [#]			- 	, wedyn
+[10] Turn left				- 	Troi chwith
+[11] Turn right				- 	Troi de
+[12] Return					- 	Dychweld
+[13] Locate me				- 	Lleoli fi
+[14] Re-locate me			- 	Ail-lleoli fi
+[15] No results found for input	- Does dim mesurebau gyfer mewnbwn
+[16] WiFi Positioning		-	[?] WiFi
+[17] This app uses WiFi to determine your position while using the app.	- 
+	- Mae'r meddalwedd hwn defnyddio WiFi I pennu ei lleoliad pan defnyddio'r meddalwedd.
+[18] The only data saved is your last inputted searches.	-
+	- Yr unrhyw data I gadw bydd y chwilion olaf.
+[19] No data is shared		-	bydd dim rhannu data.
+[20] The app is useable without this. 	-	Gallwn chi defnyddio'r meddalwedd heb hwn.
+[21] If you would like to use WiFi positioning, please turn on "Location" and allow the 
+	 "Location" permission in app settings. - 
+	- Os hoffet ti defnyddio [?] WiFi, gall't troi "Lleoliad" a caniatáu caniatâd  
+	  "Lleoliad" mewn gosodiadau meddalwedd.
+[22]This can be changed later in in-app settings - Gall't newid hyn yn gosodiadau mewn-meddalwedd.
+[23] 	Use WiFi Positioning		-	Defnyddio [?] WiFi
+[24] 	Don't use WiFi Positioning	-	Peidiwch defnyddio [?] WiFi
+[25] Room Name					- 	Enw ystafell
+[26] Junction					-	Cyfordd
