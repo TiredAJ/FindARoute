@@ -25,10 +25,10 @@ public partial class MainView : UserControl
 
         Popup("Language", $"Language:");
 
-        btn_Language.Initialized += Initialized;
+        btn_Language.Loaded += Loaded;
     }
 
-    private void Initialized(object? sender, System.EventArgs e)
+    private void Loaded(object? sender, System.EventArgs e)
     {
         var Temp = TopLevel.GetTopLevel(btn_Language);
 

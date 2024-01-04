@@ -1,5 +1,6 @@
 ﻿using Avalonia.Platform.Storage;
 using System.Collections.Generic;
+using System.Diagnostics;
 
 namespace FindARoute.Utilities
 {
@@ -18,7 +19,10 @@ namespace FindARoute.Utilities
         public static void Load(IStorageProvider _ISP)
         {
             if (!_ISP.CanOpen)
-            { /*throw new System.Exception("Darn thing won't let me save!");*/ }
+            {
+                /*throw new System.Exception("Darn thing won't let me save!");*/
+                Debug.WriteLine("Darn thing won't let me save!");
+            }
 
 
         }

@@ -13,6 +13,9 @@
 			<Setter Property="Foreground" Value="Black"/>
 			<Setter Property="TextAlignment" Value="DetectFromContent"/>
 			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="Background" Value="HotPink"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="5"/>
 		</Style>
 	</UserControl.Styles>
 
@@ -30,7 +33,7 @@
 		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Left">
 			<DockPanel Background="Aquamarine" Margin="0,8,8,8">
 				<DockPanel DockPanel.Dock="Top" Background="Bisque">
-					<TextBlock Margin="5,0,0,0" VerticalAlignment="Center" FontSize="20"
+					<TextBlock Margin="20,0,10,0" VerticalAlignment="Center" FontSize="20"
 						DockPanel.Dock="Left" Text="{x:Static P:Resources.Destination}"/>
 					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
 						DockPanel.Dock="Right" Tag="Destination"/>
@@ -38,7 +41,7 @@
 				<Panel DockPanel.Dock="Bottom">
 					<ComboBox x:Name="CMBX_Destination" HorizontalAlignment="Left" Width="245" Margin="2.5"
 						IsVisible="{Binding !#TGLSW_DestToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Destination" Text="Hello" IsVisible="{Binding #TGLSW_DestToggle.IsChecked}" MaxWidth="245" Width="245" 
+					<TextBox x:Name="TXT_Destination" Text="{x:Static P:Resources.TypeHere}" IsVisible="{Binding #TGLSW_DestToggle.IsChecked}" MaxWidth="245" Width="245" 
 						HorizontalAlignment="Right" Margin="2.5"/>
 				</Panel>
 			</DockPanel>
@@ -46,8 +49,8 @@
 		
 		<Panel x:Name="PNL_Origin" Background="Beige" Margin="0,90,0,0" HorizontalAlignment="Right">
 			<DockPanel Background="Aquamarine" Margin="8,8,0,8">
-				<Grid DockPanel.Dock="Top" ColumnDefinitions="90, 70, 90" Margin="2">
-					<TextBlock VerticalAlignment="Center" Text="Origin" FontSize="20"
+				<Grid DockPanel.Dock="Top" ColumnDefinitions="120, 30, 90" Background="Bisque">
+					<TextBlock Margin="15,0,10,0" VerticalAlignment="Center" Text="{x:Static P:Resources.Origin}" FontSize="20"
 						Grid.Column="0"/>
 					<Button HorizontalAlignment="Center" Width="30" Height="30"
 						Grid.Column="1">
@@ -61,22 +64,21 @@
 				<Panel DockPanel.Dock="Bottom">
 					<ComboBox x:Name="CMBX_Origin" HorizontalAlignment="Left" Width="245" Margin="2.5"
 						IsVisible="{Binding !#TGLSW_OriginToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Origin" Text="Hello" HorizontalAlignment="Left" MaxWidth="245" Width="245"
+					<TextBox x:Name="TXT_Origin" Text="{x:Static P:Resources.TypeHere}" HorizontalAlignment="Left" MaxWidth="245" Width="245"
 						IsVisible="{Binding #TGLSW_OriginToggle.IsChecked}" Margin="2.5"/>
 				</Panel>
 			</DockPanel>
 		</Panel>
 
-		<Panel Background="BlanchedAlmond" Margin="0,130,0,0" HorizontalAlignment="Center">
-			<Button Width="150" Height="150" Margin="5">
+		<StackPanel Background="BlanchedAlmond" Margin="0,130,0,0" HorizontalAlignment="Center">			
+			<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
+					   Text="{x:Static P:Resources.FindRoute}"/>
+			<Button Width="150" Height="150" Margin="5,0,5,5" Background="Aqua">
 				<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
-					<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center">
-						Navigate Me!
-					</TextBlock>
-					<!--<Image x:Name="IMG_BTN_NavigateMe" MaxHeight="{Binding $parent.Width}" 
-						MaxWidth="{Binding $parent.Height}" Stretch="Fill"/>-->
+					<Image x:Name="IMG_BTN_NavigateMe" MaxHeight="{Binding $parent.Width}" 
+						MaxWidth="{Binding $parent.Height}" Stretch="Fill"/>
 				</Panel>
 			</Button>
-		</Panel>
+		</StackPanel>
 	</StackPanel>
 </UserControl>
