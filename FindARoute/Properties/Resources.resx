@@ -137,6 +137,9 @@
   <data name="ico_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Logo.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
+  <data name="img_LangRep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Square-UnionFlag.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="img_LocateMe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\LocateMe.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>

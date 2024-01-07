@@ -109,6 +109,16 @@ namespace FindARoute.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        public static byte[] img_LangRep {
+            get {
+                object obj = ResourceManager.GetObject("img_LangRep", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         public static byte[] img_LocateMe {
             get {
                 object obj = ResourceManager.GetObject("img_LocateMe", resourceCulture);

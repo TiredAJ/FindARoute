@@ -46,6 +46,8 @@ public partial class MainView : UserControl
         { Properties.Resources.Culture = new CultureInfo("cy-GB"); }
 
         Popup("Language", $"Language now: {Properties.Resources.Culture.Name}");
+
+        GenerateImage(Properties.Resources.img_LangRep, pbx_LangRep);
     }
 
     public void GenerateImage(byte[] _Data, Image _Ctrl)

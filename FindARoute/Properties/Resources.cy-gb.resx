@@ -133,6 +133,10 @@
     <value>Darganfod llwybr</value>
     <comment>e</comment>
   </data>
+  <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
+  <data name="img_LangRep" type="System.Resources.ResXFileRef, System.Windows.Forms">
+    <value>..\Assets\Square-WalesFlag.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
+  </data>
   <data name="InitPopup" xml:space="preserve">
     <value>Mae'r meddalwedd hwn defnyddio WiFi I pennu ei lleoliad pan defnyddio'r meddalwedd. Yr unrhyw data I gadw bydd y chwilion olaf. bydd dim rhannu data a gall't ti defnyddio'r meddalwedd heb hwn.</value>
     <comment>q</comment>

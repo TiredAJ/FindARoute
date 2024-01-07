@@ -26,14 +26,40 @@
 
 			<Button x:Name="btn_Language" HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
 				Background="AliceBlue" Width="50" Height="50">
-				<TextBlock Text="{Binding Language}" FontStyle="Oblique"/>
+				<Panel>
+					<Image x:Name="pbx_LangRep" />
+					<TextBlock Text="{Binding Language}" FontStyle="Oblique"/>					
+				</Panel>
 			</Button>
 		</DockPanel>
+		<Panel x:Name="PNL_Origin" Background="Beige" Margin="0,90,0,0" HorizontalAlignment="Left">
+			<DockPanel Background="Aquamarine" Margin="-1,8,8,8">
+				<StackPanel DockPanel.Dock="Top" Background="Bisque" Orientation="Horizontal">					
+					<TextBlock Margin="10,0,10,0" VerticalAlignment="Center" 
+							   Text="{x:Static P:Resources.Origin}" FontSize="20"/>
+					<Button HorizontalAlignment="Center" Width="30" Height="30" 
+							Margin="35,0,10,0">
+						<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
+							<Image x:Name="IMG_BTN_LocateMe" MaxWidth="{Binding $parent.Width}" 
+								   MaxHeight="{Binding $parent.Height}" Stretch="Fill"/>
+						</Panel>
+					</Button>
+					<ToggleSwitch x:Name="TGLSW_OriginToggle" OffContent="" OnContent=""
+						HorizontalAlignment="Right" Tag="Origin" Margin="15,0,-10,0"/>
+				</StackPanel>
+				<Panel DockPanel.Dock="Bottom">
+					<ComboBox x:Name="CMBX_Origin" HorizontalAlignment="Left" Width="245" Margin="2.5"
+						IsVisible="{Binding !#TGLSW_OriginToggle.IsChecked}"/>
+					<TextBox x:Name="TXT_Origin" Text="{x:Static P:Resources.TypeHere}" HorizontalAlignment="Left" MaxWidth="245" Width="245"
+						IsVisible="{Binding #TGLSW_OriginToggle.IsChecked}" Margin="2.5"/>
+				</Panel>
+			</DockPanel>
+		</Panel>
 
-		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Left">
-			<DockPanel Background="Aquamarine" Margin="0,8,8,8">
+		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Right">
+			<DockPanel Background="Aquamarine" Margin="8,8,-1,8">
 				<DockPanel DockPanel.Dock="Top" Background="Bisque">
-					<TextBlock Margin="20,0,10,0" VerticalAlignment="Center" FontSize="20"
+					<TextBlock Margin="10,0,20,0" VerticalAlignment="Center" FontSize="20"
 						DockPanel.Dock="Left" Text="{x:Static P:Resources.Destination}"/>
 					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
 						DockPanel.Dock="Right" Tag="Destination"/>
@@ -47,28 +73,6 @@
 			</DockPanel>
 		</Panel>
 		
-		<Panel x:Name="PNL_Origin" Background="Beige" Margin="0,90,0,0" HorizontalAlignment="Right">
-			<DockPanel Background="Aquamarine" Margin="8,8,0,8">
-				<Grid DockPanel.Dock="Top" ColumnDefinitions="120, 30, 90" Background="Bisque">
-					<TextBlock Margin="15,0,10,0" VerticalAlignment="Center" Text="{x:Static P:Resources.Origin}" FontSize="20"
-						Grid.Column="0"/>
-					<Button HorizontalAlignment="Center" Width="30" Height="30"
-						Grid.Column="1">
-						<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
-							<Image x:Name="IMG_BTN_LocateMe" MaxHeight="30" MaxWidth="30" Stretch="Fill"/>
-						</Panel>
-					</Button>
-					<ToggleSwitch x:Name="TGLSW_OriginToggle" OffContent="" OnContent="" HorizontalAlignment="Right"
-						Grid.Column="2" Tag="Origin"/>
-				</Grid>
-				<Panel DockPanel.Dock="Bottom">
-					<ComboBox x:Name="CMBX_Origin" HorizontalAlignment="Left" Width="245" Margin="2.5"
-						IsVisible="{Binding !#TGLSW_OriginToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Origin" Text="{x:Static P:Resources.TypeHere}" HorizontalAlignment="Left" MaxWidth="245" Width="245"
-						IsVisible="{Binding #TGLSW_OriginToggle.IsChecked}" Margin="2.5"/>
-				</Panel>
-			</DockPanel>
-		</Panel>
 
 		<StackPanel Background="BlanchedAlmond" Margin="0,130,0,0" HorizontalAlignment="Center">			
 			<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
