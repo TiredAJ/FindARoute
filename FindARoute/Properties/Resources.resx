@@ -117,106 +117,14 @@
   <resheader name="writer">
     <value>System.Resources.ResXResourceWriter, System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </resheader>
-  <data name="Change_Lang" xml:space="preserve">
-    <value>Change Language</value>
-    <comment>a</comment>
-  </data>
-  <data name="ContinueForward" xml:space="preserve">
-    <value>Continue forward </value>
-    <comment>g</comment>
-  </data>
-  <data name="Destination" xml:space="preserve">
-    <value>Destination</value>
-    <comment>b</comment>
-  </data>
-  <data name="FindRoute" xml:space="preserve">
-    <value>Find a route</value>
-    <comment>e</comment>
-  </data>
   <assembly alias="System.Windows.Forms" name="System.Windows.Forms, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089" />
   <data name="ico_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Logo.ico;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="img_LangRep" type="System.Resources.ResXFileRef, System.Windows.Forms">
-    <value>..\Assets\Square-UnionFlag.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="img_LocateMe" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\LocateMe.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
   </data>
   <data name="img_Logo" type="System.Resources.ResXFileRef, System.Windows.Forms">
     <value>..\Assets\Logo.png;System.Byte[], mscorlib, Version=4.0.0.0, Culture=neutral, PublicKeyToken=b77a5c561934e089</value>
-  </data>
-  <data name="InitPopup" xml:space="preserve">
-    <value>This app uses WiFi to determine your position while using the app. The only data saved is your last inputted searches. No data is shared &amp; the app is usable without this.
-</value>
-    <comment>q</comment>
-  </data>
-  <data name="Junction" xml:space="preserve">
-    <value>junction</value>
-    <comment>v</comment>
-  </data>
-  <data name="LocateMe" xml:space="preserve">
-    <value>Locate me</value>
-    <comment>m</comment>
-  </data>
-  <data name="NavingTo" xml:space="preserve">
-    <value>Navigating to: </value>
-    <comment>f</comment>
-  </data>
-  <data name="NoResults" xml:space="preserve">
-    <value>No results found for input</value>
-    <comment>o</comment>
-  </data>
-  <data name="Origin" xml:space="preserve">
-    <value>Origin</value>
-    <comment>c</comment>
-  </data>
-  <data name="ReLocateMe" xml:space="preserve">
-    <value>Re-locate me</value>
-    <comment>n</comment>
-  </data>
-  <data name="Return" xml:space="preserve">
-    <value>Return</value>
-    <comment>l</comment>
-  </data>
-  <data name="RoomName" xml:space="preserve">
-    <value>Room name</value>
-    <comment>u</comment>
-  </data>
-  <data name="Then" xml:space="preserve">
-    <value>, then </value>
-    <comment>i</comment>
-  </data>
-  <data name="TogglePopup" xml:space="preserve">
-    <value>If you would like to use WiFi positioning, please turn on "Location" and allow the "Location" permission in app settings. This can be changed later in in-app settings.</value>
-    <comment>r</comment>
-  </data>
-  <data name="TogglePopup_No" xml:space="preserve">
-    <value>Don't use WiFi Positioning</value>
-    <comment>t</comment>
-  </data>
-  <data name="TogglePopup_Yes" xml:space="preserve">
-    <value>Use WiFi Positioning</value>
-    <comment>s</comment>
-  </data>
-  <data name="TurnLeft" xml:space="preserve">
-    <value>Turn left</value>
-    <comment>j</comment>
-  </data>
-  <data name="TurnRight" xml:space="preserve">
-    <value>Turn right</value>
-    <comment>k</comment>
-  </data>
-  <data name="TypeHere" xml:space="preserve">
-    <value>Type to search...</value>
-    <comment>d</comment>
-  </data>
-  <data name="Until" xml:space="preserve">
-    <value>until </value>
-    <comment>h</comment>
-  </data>
-  <data name="WiFiPos" xml:space="preserve">
-    <value>WiFi Positioning</value>
-    <comment>p</comment>
   </data>
 </root>
