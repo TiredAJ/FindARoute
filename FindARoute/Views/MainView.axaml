@@ -3,7 +3,6 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FindARoute.ViewModels"
-			 xmlns:P="clr-namespace:FindARoute.Properties"
              mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
              x:Class="FindARoute.Views.MainView"
              x:DataType="vm:MainViewModel">
@@ -22,12 +21,13 @@
 	<StackPanel x:Name="STKPNL_Main" Background="Orange">
 		<DockPanel x:Name="DKPNL_Header" Background="Yellow">
 			<Image x:Name="IMG_Logo" Margin="2" Stretch="Fill" MaxHeight="80" MaxWidth="80" 
-				DockPanel.Dock="Left" Width="60" Height="60"/>
+				DockPanel.Dock="Left" Width="60" Height="60"
+				Source="/Assets/Default.png"/>
 
 			<Button x:Name="btn_Language" HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
 				Background="AliceBlue" Width="50" Height="50">
 				<Panel>
-					<Image x:Name="pbx_LangRep" />
+					<Image x:Name="pbx_LangRep" Source="/Assets/Default.png"/>
 					<TextBlock Text="{Binding Language}" FontStyle="Oblique"/>					
 				</Panel>
 			</Button>
@@ -36,7 +36,7 @@
 			<DockPanel Background="Aquamarine" Margin="-1,8,8,8">
 				<StackPanel DockPanel.Dock="Top" Background="Bisque" Orientation="Horizontal">					
 					<TextBlock Margin="10,0,10,0" VerticalAlignment="Center" 
-							   Text="{x:Static P:Resources.Origin}" FontSize="20"/>
+							   Text="{DynamicResource Local.Origin}" FontSize="20"/>
 					<Button HorizontalAlignment="Center" Width="30" Height="30" 
 							Margin="35,0,10,0">
 						<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
@@ -50,7 +50,7 @@
 				<Panel DockPanel.Dock="Bottom">
 					<ComboBox x:Name="CMBX_Origin" HorizontalAlignment="Left" Width="245" Margin="2.5"
 						IsVisible="{Binding !#TGLSW_OriginToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Origin" Text="{x:Static P:Resources.TypeHere}" HorizontalAlignment="Left" MaxWidth="245" Width="245"
+					<TextBox x:Name="TXT_Origin" Text="{DynamicResource Local.TypeHere}" HorizontalAlignment="Left" MaxWidth="245" Width="245"
 						IsVisible="{Binding #TGLSW_OriginToggle.IsChecked}" Margin="2.5"/>
 				</Panel>
 			</DockPanel>
@@ -60,14 +60,14 @@
 			<DockPanel Background="Aquamarine" Margin="8,8,-1,8">
 				<DockPanel DockPanel.Dock="Top" Background="Bisque">
 					<TextBlock Margin="10,0,20,0" VerticalAlignment="Center" FontSize="20"
-						DockPanel.Dock="Left" Text="{x:Static P:Resources.Destination}"/>
+						DockPanel.Dock="Left" Text="{DynamicResource Local.Destination}"/>
 					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
 						DockPanel.Dock="Right" Tag="Destination"/>
 				</DockPanel>
 				<Panel DockPanel.Dock="Bottom">
 					<ComboBox x:Name="CMBX_Destination" HorizontalAlignment="Left" Width="245" Margin="2.5"
 						IsVisible="{Binding !#TGLSW_DestToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Destination" Text="{x:Static P:Resources.TypeHere}" IsVisible="{Binding #TGLSW_DestToggle.IsChecked}" MaxWidth="245" Width="245" 
+					<TextBox x:Name="TXT_Destination" Text="{DynamicResource Local.TypeHere}" IsVisible="{Binding #TGLSW_DestToggle.IsChecked}" MaxWidth="245" Width="245" 
 						HorizontalAlignment="Right" Margin="2.5"/>
 				</Panel>
 			</DockPanel>
@@ -76,11 +76,13 @@
 
 		<StackPanel Background="BlanchedAlmond" Margin="0,130,0,0" HorizontalAlignment="Center">			
 			<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
-					   Text="{x:Static P:Resources.FindRoute}"/>
-			<Button Width="150" Height="150" Margin="5,0,5,5" Background="Aqua">
+					   Text="{DynamicResource Local.FindRoute}"/>
+			<Button Width="150" Height="150" Margin="5,0,5,5" Background="Aqua"
+					Command="{Binding NavigationView}">
 				<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
 					<Image x:Name="IMG_BTN_NavigateMe" MaxHeight="{Binding $parent.Width}" 
-						MaxWidth="{Binding $parent.Height}" Stretch="Fill"/>
+						MaxWidth="{Binding $parent.Height}" Stretch="Fill"
+						Source="/Assets/Default.png"/>
 				</Panel>
 			</Button>
 		</StackPanel>

@@ -68,9 +68,11 @@ public class MainViewModel : ViewModelBase
     }
     #endregion
 
-    private ViewModelBase _ContentViewModel;
+    private ReactiveObject? _ContentViewModel;
 
-    public ViewModelBase ContentViewModel
+    private NavigationViewModel Navigation => new NavigationViewModel();
+
+    public ReactiveObject? ContentViewModel
     {
         get => _ContentViewModel;
         set => this.RaiseAndSetIfChanged(ref _ContentViewModel, value);
@@ -80,7 +82,12 @@ public class MainViewModel : ViewModelBase
     {
         LangFlag = Helpers.LoadFromResource
             (new Uri($"avares://FindARoute/Assets/LangFlags/en-GB.png"));
+
+        _ContentViewModel = null;
     }
 
-
+    public void NavigationView()
+    {
+        ContentViewModel = Navigation;
+    }
 }
