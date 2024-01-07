@@ -9,7 +9,7 @@ using System.Threading.Tasks;
 
 namespace FindARoute.ViewModels;
 
-public class MainViewModel : ViewModelBase
+public class MainViewModel : ReactiveObject
 {
     #region Localisation
     public readonly string[] SupportedLanguages =
@@ -68,9 +68,11 @@ public class MainViewModel : ViewModelBase
     }
     #endregion
 
-    private ViewModelBase _ContentViewModel;
+    private ReactiveObject _ContentViewModel;
 
-    public ViewModelBase ContentViewModel
+    private ReactiveObject Home => new HomeViewModel();
+
+    public ReactiveObject ContentViewModel
     {
         get => _ContentViewModel;
         set => this.RaiseAndSetIfChanged(ref _ContentViewModel, value);
@@ -80,7 +82,10 @@ public class MainViewModel : ViewModelBase
     {
         LangFlag = Helpers.LoadFromResource
             (new Uri($"avares://FindARoute/Assets/LangFlags/en-GB.png"));
+
+        _ContentViewModel = Home;
     }
 
-
+    public void NavigateUser()
+    { ContentViewModel = new NavigationViewModel(); }
 }
