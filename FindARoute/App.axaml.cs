@@ -20,14 +20,14 @@ namespace FindARoute
             {
                 desktop.MainWindow = new MainWindow
                 {
-                    DataContext = new MainViewModel()
+                    DataContext = new MainWindowViewModel()
                 };
             }
             else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
             {
-                singleViewPlatform.MainView = new MainView
+                singleViewPlatform.MainView = new HomeView
                 {
-                    DataContext = new MainViewModel()
+                    DataContext = new MainWindowViewModel()
                 };
             }
 

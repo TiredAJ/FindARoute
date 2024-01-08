@@ -1,8 +1,6 @@
 using Avalonia.Controls;
 using Avalonia.Controls.Templates;
-
-using FindARoute.ViewModels;
-
+using ReactiveUI;
 using System;
 
 namespace FindARoute
@@ -27,7 +25,7 @@ namespace FindARoute
 
         public bool Match(object? data)
         {
-            return data is ViewModelBase;
+            return data is ReactiveObject;
         }
     }
 }

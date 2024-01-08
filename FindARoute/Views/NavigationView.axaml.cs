@@ -1,8 +1,9 @@
-using Avalonia.Controls;
+using Avalonia.ReactiveUI;
+using FindARoute.ViewModels;
 
-namespace FindARoute;
+namespace FindARoute.Views;
 
-public partial class NavigationView : UserControl
+public partial class NavigationView : ReactiveUserControl<NavigationViewModel>
 {
     public NavigationView()
     {

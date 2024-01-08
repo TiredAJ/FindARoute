@@ -1,12 +1,15 @@
-using Avalonia.Controls;
+using Avalonia.Markup.Xaml;
+using Avalonia.ReactiveUI;
+using FindARoute.ViewModels;
+using ReactiveUI;
 
-namespace FindARoute
+namespace FindARoute.Views;
+
+public partial class HomeView : ReactiveUserControl<HomeViewModel>
 {
-    public partial class HomeView : UserControl
+    public HomeView()
     {
-        public HomeView()
-        {
-            InitializeComponent();
-        }
+        this.WhenActivated((Disposable) => { });
+        AvaloniaXamlLoader.Load(this);
     }
 }
