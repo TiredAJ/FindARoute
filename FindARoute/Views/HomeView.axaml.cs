@@ -1,6 +1,6 @@
 using Avalonia.Controls;
 
-namespace FindARoute.Views
+namespace FindARoute
 {
     public partial class HomeView : UserControl
     {
