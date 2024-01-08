@@ -1,19 +1,12 @@
-﻿using Avalonia.ReactiveUI;
-using FindARoute.ViewModels;
+using Avalonia.Controls;
 
-namespace FindARoute.Views;
-
-public partial class MainWindow : ReactiveWindow<MainViewModel>
+namespace FindARoute.Views
 {
-    public MainWindow()
+    public partial class MainWindow : Window
     {
-        InitializeComponent();
-
-        this.Loaded += MainWindow_Loaded;
-    }
-
-    private void MainWindow_Loaded(object? sender, Avalonia.Interactivity.RoutedEventArgs e)
-    {
-        this.ViewModel = new MainViewModel();
+        public MainWindow()
+        {
+            InitializeComponent();
+        }
     }
 }

@@ -1,21 +1,28 @@
-﻿using Avalonia;
+using Avalonia;
+using Avalonia.Controls;
 using Avalonia.iOS;
+using Avalonia.Media;
 using Avalonia.ReactiveUI;
 
 using Foundation;
 
-namespace FindARoute.iOS;
+using UIKit;
 
-// The UIApplicationDelegate for the application. This class is responsible for launching the 
-// User Interface of the application, as well as listening (and optionally responding) to 
-// application events from iOS.
-[Register("AppDelegate")]
-public partial class AppDelegate : AvaloniaAppDelegate<App>
+namespace FindARoute.iOS
 {
-    protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+    // The UIApplicationDelegate for the application. This class is responsible for launching the 
+    // User Interface of the application, as well as listening (and optionally responding) to 
+    // application events from iOS.
+    [Register("AppDelegate")]
+#pragma warning disable CA1711 // Identifiers should not have incorrect suffix
+    public partial class AppDelegate : AvaloniaAppDelegate<App>
+#pragma warning restore CA1711 // Identifiers should not have incorrect suffix
     {
-        return base.CustomizeAppBuilder(builder)
-            .WithInterFont()
-            .UseReactiveUI();
+        protected override AppBuilder CustomizeAppBuilder(AppBuilder builder)
+        {
+            return base.CustomizeAppBuilder(builder)
+                .WithInterFont()
+                .UseReactiveUI();
+        }
     }
 }

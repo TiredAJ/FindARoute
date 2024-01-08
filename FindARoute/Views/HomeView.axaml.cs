@@ -2,9 +2,9 @@ using Avalonia.Controls;
 
 namespace FindARoute.Views
 {
-    public partial class MainView : UserControl
+    public partial class HomeView : UserControl
     {
-        public MainView()
+        public HomeView()
         {
             InitializeComponent();
         }

@@ -3,88 +3,14 @@
              xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
              xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
              xmlns:vm="clr-namespace:FindARoute.ViewModels"
-             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             mc:Ignorable="d" d:DesignWidth="800" d:DesignHeight="450"
              x:Class="FindARoute.Views.MainView"
              x:DataType="vm:MainViewModel">
+  <Design.DataContext>
+    <!-- This only sets the DataContext for the previewer in an IDE,
+         to set the actual DataContext for runtime, set the DataContext property in code (look at App.axaml.cs) -->
+    <vm:MainViewModel />
+  </Design.DataContext>
 
-	<UserControl.Styles>
-		<Style Selector="TextBlock">
-			<Setter Property="Foreground" Value="Black"/>
-			<Setter Property="TextAlignment" Value="DetectFromContent"/>
-			<Setter Property="TextWrapping" Value="Wrap"/>
-			<Setter Property="Background" Value="HotPink"/>
-			<Setter Property="HorizontalAlignment" Value="Center"/>
-			<Setter Property="Margin" Value="5"/>
-		</Style>
-	</UserControl.Styles>
-
-	<StackPanel x:Name="STKPNL_Main" Background="Orange">
-		<DockPanel x:Name="DKPNL_Header" Background="Yellow">
-			<Image x:Name="IMG_Logo" Margin="2" Stretch="Fill" MaxHeight="80" MaxWidth="80" 
-				DockPanel.Dock="Left" Width="60" Height="60"
-				Source="/Assets/Default.png"/>
-
-			<Button x:Name="btn_Language" HorizontalAlignment="Right" DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
-				Background="AliceBlue" Width="50" Height="50">
-				<Panel>
-					<Image x:Name="pbx_LangRep" Source="/Assets/Default.png"/>
-					<TextBlock Text="{Binding Language}" FontStyle="Oblique"/>					
-				</Panel>
-			</Button>
-		</DockPanel>
-		<Panel x:Name="PNL_Origin" Background="Beige" Margin="0,90,0,0" HorizontalAlignment="Left">
-			<DockPanel Background="Aquamarine" Margin="-1,8,8,8">
-				<StackPanel DockPanel.Dock="Top" Background="Bisque" Orientation="Horizontal">					
-					<TextBlock Margin="10,0,10,0" VerticalAlignment="Center" 
-							   Text="{DynamicResource Local.Origin}" FontSize="20"/>
-					<Button HorizontalAlignment="Center" Width="30" Height="30" 
-							Margin="35,0,10,0">
-						<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
-							<Image x:Name="IMG_BTN_LocateMe" MaxWidth="{Binding $parent.Width}" 
-								   MaxHeight="{Binding $parent.Height}" Stretch="Fill"/>
-						</Panel>
-					</Button>
-					<ToggleSwitch x:Name="TGLSW_OriginToggle" OffContent="" OnContent=""
-						HorizontalAlignment="Right" Tag="Origin" Margin="15,0,-10,0"/>
-				</StackPanel>
-				<Panel DockPanel.Dock="Bottom">
-					<ComboBox x:Name="CMBX_Origin" HorizontalAlignment="Left" Width="245" Margin="2.5"
-						IsVisible="{Binding !#TGLSW_OriginToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Origin" Text="{DynamicResource Local.TypeHere}" HorizontalAlignment="Left" MaxWidth="245" Width="245"
-						IsVisible="{Binding #TGLSW_OriginToggle.IsChecked}" Margin="2.5"/>
-				</Panel>
-			</DockPanel>
-		</Panel>
-
-		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Right">
-			<DockPanel Background="Aquamarine" Margin="8,8,-1,8">
-				<DockPanel DockPanel.Dock="Top" Background="Bisque">
-					<TextBlock Margin="10,0,20,0" VerticalAlignment="Center" FontSize="20"
-						DockPanel.Dock="Left" Text="{DynamicResource Local.Destination}"/>
-					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
-						DockPanel.Dock="Right" Tag="Destination"/>
-				</DockPanel>
-				<Panel DockPanel.Dock="Bottom">
-					<ComboBox x:Name="CMBX_Destination" HorizontalAlignment="Left" Width="245" Margin="2.5"
-						IsVisible="{Binding !#TGLSW_DestToggle.IsChecked}"/>
-					<TextBox x:Name="TXT_Destination" Text="{DynamicResource Local.TypeHere}" IsVisible="{Binding #TGLSW_DestToggle.IsChecked}" MaxWidth="245" Width="245" 
-						HorizontalAlignment="Right" Margin="2.5"/>
-				</Panel>
-			</DockPanel>
-		</Panel>
-		
-
-		<StackPanel Background="BlanchedAlmond" Margin="0,130,0,0" HorizontalAlignment="Center">			
-			<TextBlock HorizontalAlignment="Center" VerticalAlignment="Center" 
-					   Text="{DynamicResource Local.FindRoute}"/>
-			<Button Width="150" Height="150" Margin="5,0,5,5" Background="Aqua"
-					Command="{Binding NavigationView}">
-				<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
-					<Image x:Name="IMG_BTN_NavigateMe" MaxHeight="{Binding $parent.Width}" 
-						MaxWidth="{Binding $parent.Height}" Stretch="Fill"
-						Source="/Assets/Default.png"/>
-				</Panel>
-			</Button>
-		</StackPanel>
-	</StackPanel>
+  <TextBlock Text="{Binding Greeting}" HorizontalAlignment="Center" VerticalAlignment="Center"/>
 </UserControl>
