@@ -1,3 +1,4 @@
+using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
 using FindARoute.ViewModels;
@@ -11,5 +12,22 @@ public partial class HomeView : ReactiveUserControl<HomeViewModel>
     {
         this.WhenActivated((Disposable) => { });
         AvaloniaXamlLoader.Load(this);
+
+        //IMG_BTN_NavigateMe.Loaded += ((Sender, e) =>
+        //{
+        //    IMG_BTN_NavigateMe.Source = Helpers.LoadFromResource(
+        //    new System.Uri($"avares://FindARoute/Assets/Icons/Arrow-Right.png"));
+        //});
+
+        //IMG_BTN_LocateMe.Loaded += ((Sender, e) =>
+        //{
+        //    IMG_BTN_LocateMe.Source = Helpers.LoadFromResource(
+        //    new System.Uri($"avares://FindARoute/Assets/LocateMe.png"));
+        //});
+    }
+
+    public void btn_Click(object? Sender, RoutedEventArgs e)
+    {
+        (Parent.DataContext as MainWindowViewModel).Navigate();
     }
 }

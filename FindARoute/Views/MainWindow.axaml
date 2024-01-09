@@ -6,7 +6,11 @@
         xmlns:views="clr-namespace:FindARoute.Views"
         mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
         x:Class="FindARoute.Views.MainWindow"
+		x:DataType="vm:MainWindowViewModel"
         Icon="/Assets/avalonia-logo.ico"
-        Title="FindARoute">
-        <views:HomeView />
+        Title="FindARoute"
+		Content="{Binding ContentVM}">
+	<Design.DataContext>
+		<vm:MainWindowViewModel/>
+	</Design.DataContext>
 </Window>

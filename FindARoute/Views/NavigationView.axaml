@@ -45,7 +45,7 @@
 		<!--Header-->
 		<Panel DockPanel.Dock="Top" Height="60">
 			<TextBlock x:Name="txt_Header" Classes="Title"
-				Text="Navigating to: ..." FontWeight="Bold"/>
+				Text="{DynamicResource Local.NavingTo}" FontWeight="Bold"/>
 		</Panel>
 
 		<!--Buttons-->
@@ -53,13 +53,15 @@
 				Background="Transparent">
 			<StackPanel Grid.Column="0" VerticalAlignment="Center">
 				<TextBlock Text="{DynamicResource Local.ReLocateMe}"/>
+				
 				<Button x:Name="btn_ReLocateUser" HorizontalAlignment="Center">
 					<Image Source="/Assets/LocateMe.png"/>
 				</Button>
 			</StackPanel>
 			<StackPanel Grid.Column="1" VerticalAlignment="Center">
 				<TextBlock Text="{DynamicResource Local.Return}"/>
-				<Button x:Name="btn_Return">
+				
+				<Button x:Name="btn_Return" Click="btn_Click">
 					<Image Source="/Assets/Icons/Arrow-Left.png"/>
 				</Button>
 			</StackPanel>

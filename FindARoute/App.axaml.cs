@@ -25,7 +25,7 @@ namespace FindARoute
             }
             else if (ApplicationLifetime is ISingleViewApplicationLifetime singleViewPlatform)
             {
-                singleViewPlatform.MainView = new HomeView
+                singleViewPlatform.MainView = new MainView
                 {
                     DataContext = new MainWindowViewModel()
                 };

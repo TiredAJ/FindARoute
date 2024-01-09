@@ -7,7 +7,7 @@
     <system:String x:Key="Local.Origin">Origin</system:String>
     <system:String x:Key="Local.TypeHere">Type to search...</system:String>
     <system:String x:Key="Local.FindRoute">Find a route</system:String>
-    <system:String x:Key="Local.NavingTo">Navigating to:</system:String>
+    <system:String x:Key="Local.NavingTo">Navigating to: </system:String>
     <system:String x:Key="Local.ContinueForward">Continue forward</system:String>
     <system:String x:Key="Local.Until">until</system:String>
     <system:String x:Key="Local.Then">, then</system:String>
