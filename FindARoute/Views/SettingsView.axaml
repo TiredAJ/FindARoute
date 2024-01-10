@@ -19,7 +19,7 @@
 			<Setter Property="Margin" Value="5"/>			
 			
 			<Style Selector="^.Title">
-				<Setter Property="FontSize" Value="25"/>
+				<Setter Property="FontSize" Value="32"/>
 				<Setter Property="HorizontalAlignment" Value="Center"/>
 				<Setter Property="FontWeight" Value="Bold"/>
 			</Style>
@@ -66,7 +66,7 @@
 				<ToggleButton x:Name="tglsw_WifiPos" HorizontalAlignment="Center"
 					Width="100" Command="{Binding Command_ToggleWiFiPos}"
 					CommandParameter="{Binding $self}"
-					>
+					IsChecked="{Binding WiFiState}">
 					
 					<Panel HorizontalAlignment="Center">
 						<TextBlock Text="{DynamicResource Local.Enabled}"

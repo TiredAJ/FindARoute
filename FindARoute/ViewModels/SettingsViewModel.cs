@@ -18,7 +18,13 @@ namespace FindARoute.ViewModels
             set => this.RaiseAndSetIfChanged(ref _WiFiStateStr, value);
         }
 
-        public bool _WiFiState = true;
+        private bool _WiFiState = true;
+
+        public bool WiFiState
+        {
+            get => _WiFiState;
+            set => this.RaiseAndSetIfChanged(ref _WiFiState, value);
+        }
 
         public void Command_GoBack(object? Sender)
         {
@@ -31,9 +37,9 @@ namespace FindARoute.ViewModels
         public void Command_ToggleWiFiPos(ToggleButton _Sender)
         {
             if (_Sender.IsChecked == true)
-            { _WiFiState = true; }
+            { WiFiState = true; }
             else
-            { _WiFiState = false; }
+            { WiFiState = false; }
         }
     }
 }
