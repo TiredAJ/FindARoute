@@ -18,14 +18,31 @@ namespace FindARoute.ViewModels
             _Language = "English";
         }
 
-
-        public void Command(object? Sender)
+        public void Command_ChangeLang(object? Sender)
         {
-            var V = Sender as UserControl;
+            var MVM = GetParentContext(Sender);
 
-            if (V != null && V.Parent != null &&
-                (V.Parent.DataContext as MainWindowViewModel) != null)
-            { Language = (V.Parent.DataContext as MainWindowViewModel).ChangeLang(); }
+            if (MVM != null)
+            { Language = MVM.ChangeLang(); }
+        }
+
+        public void Command_OpenSettings(object? Sender)
+        {
+            var MVM = GetParentContext(Sender);
+
+            if (MVM != null)
+            { MVM.GoToSettings(); }
+        }
+
+        public MainWindowViewModel? GetParentContext(object? _Sender)
+        {
+            var View = _Sender as UserControl;
+
+            if (View != null && View.Parent != null &&
+                (View.Parent.DataContext as MainWindowViewModel) != null)
+            { return View.Parent.DataContext as MainWindowViewModel; }
+            else
+            { return null; }
         }
     }
 }

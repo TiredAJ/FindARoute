@@ -1,0 +1,74 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:FindARoute.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             x:Class="FindARoute.Views.SettingsView"
+			 x:DataType="vm:SettingsViewModel"
+			 x:CompileBindings="True">
+
+	<!--Styles-->
+	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="TextAlignment" Value="DetectFromContent"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="Background" Value="HotPink"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="5"/>			
+			
+			<Style Selector="^.Title">
+				<Setter Property="FontSize" Value="25"/>
+				<Setter Property="HorizontalAlignment" Value="Stretch"/>
+				<Setter Property="FontWeight" Value="Bold"/>
+			</Style>
+		</Style>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="Lavender"/>
+			<Setter Property="MaxHeight" Value="70"/>
+			<Setter Property="MaxWidth" Value="70"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="Border">
+			<Setter Property="BorderBrush" Value="Black"/>
+			<Setter Property="BorderThickness" Value="4"/>
+			<Setter Property="Margin" Value="-4, 20, -4, 10"/>
+		</Style>
+		<Style Selector="Panel">
+			<Setter Property="Background" Value="Beige"/>
+			<Setter Property="MaxWidth" Value="250"/>			
+			<Setter Property="HorizontalAlignment" Value="Right"/>
+		</Style>
+	</UserControl.Styles>
+
+	<!--Main-->
+	<StackPanel Background="Orange">
+		
+		<!--Header-->
+		<Panel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+			<TextBlock Classes="Title">
+				Settings
+			</TextBlock>
+		</Panel>
+		
+		<!---->
+		<Border>
+			<Panel x:Name="pnl_WifiToggle" HorizontalAlignment="{Binding ControlAlingment}">
+				<TextBlock>
+					Wifi positioning toggle
+				</TextBlock>
+			</Panel>			
+		</Border>
+		
+		<!---->
+		<Border>
+			<Panel x:Name="pnl_Alignment" HorizontalAlignment="{Binding ControlAlingment}">
+				<TextBlock>
+					Alignment
+				</TextBlock>
+			</Panel>			
+		</Border>
+		
+	</StackPanel>
+</UserControl>

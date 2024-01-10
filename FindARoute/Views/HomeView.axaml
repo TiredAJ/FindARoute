@@ -30,14 +30,26 @@
 				Source="/Assets/Logo.png"/>
 
 			<Button x:Name="btn_Language" HorizontalAlignment="Right" 
-				DockPanel.Dock="Right" MaxHeight="70" MaxWidth="70" Margin="5"
-				Background="AliceBlue" Width="60" Height="60" Padding="0"
-				Command="{Binding Command}" CommandParameter="{Binding $parent[UserControl]}">
+					DockPanel.Dock="Right" Margin="5"
+					Background="AliceBlue" Width="60" Height="60" Padding="0"
+					Command="{Binding Command_ChangeLang}" 
+					CommandParameter="{Binding $parent[UserControl]}">
 				<Panel>
 					<Image x:Name="pbx_LangRep" Source="/Assets/Default.png"/>
 					<TextBlock x:Name="btn_txt_Lang" Text="{Binding Language}" FontStyle="Oblique"/>
 				</Panel>
 			</Button>
+
+			<Button x:Name="btn_Settings" HorizontalAlignment="Right"
+					DockPanel.Dock="Right" Margin="5" Background="AliceBlue"
+					Width="60" Height="60" Padding="0"
+					Command="{Binding Command_OpenSettings}" CommandParameter="{Binding $parent[UserControl]}">
+				<TextBlock TextAlignment="Center" Width="{Binding $parent.Width}"
+						Height="20">
+					Settings
+				</TextBlock>
+			</Button>
+			
 		</DockPanel>
 	
 		<!--Origin Pane-->

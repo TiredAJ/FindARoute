@@ -16,6 +16,7 @@ namespace FindARoute.ViewModels
             //var service ...
 
             Home = new HomeViewModel(this);
+            SettingsMenu = new SettingsViewModel(this);
 
             _ContentVM = Home;
 
@@ -25,18 +26,26 @@ namespace FindARoute.ViewModels
         #region Navigating Views
         private ReactiveObject? _ContentVM;
         public HomeViewModel Home { get; }
+        public SettingsViewModel SettingsMenu { get; }
 
+        //used to handle view changes & updates
         public ReactiveObject? ContentVM
         {
             get => _ContentVM;
             set => this.RaiseAndSetIfChanged(ref _ContentVM, value);
         }
 
+        //changes view to navigation view
         public void Navigate()
         { ContentVM = new NavigationViewModel(); }
 
+        //changes view back to home view
         public void GoHome()
         { ContentVM = Home; }
+
+        //changes view to settings menu
+        public void GoToSettings()
+        { ContentVM = SettingsMenu; }
         #endregion
 
         #region Localisation
