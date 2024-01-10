@@ -20,7 +20,7 @@
 			
 			<Style Selector="^.Title">
 				<Setter Property="FontSize" Value="25"/>
-				<Setter Property="HorizontalAlignment" Value="Stretch"/>
+				<Setter Property="HorizontalAlignment" Value="Center"/>
 				<Setter Property="FontWeight" Value="Bold"/>
 			</Style>
 		</Style>
@@ -37,37 +37,59 @@
 		</Style>
 		<Style Selector="Panel">
 			<Setter Property="Background" Value="Beige"/>
-			<Setter Property="MaxWidth" Value="250"/>			
 			<Setter Property="HorizontalAlignment" Value="Right"/>
+		</Style>
+		<Style Selector="StackPanel">
+			<Setter Property="Background" Value="Firebrick"/>
+			<Setter Property="MaxWidth" Value="250"/>		
 		</Style>
 	</UserControl.Styles>
 
 	<!--Main-->
-	<StackPanel Background="Orange">
+	<StackPanel Background="Orange" MaxWidth="1500">
 		
 		<!--Header-->
 		<Panel HorizontalAlignment="Stretch" VerticalAlignment="Top">
-			<TextBlock Classes="Title">
-				Settings
-			</TextBlock>
+			<TextBlock Classes="Title" Text="{DynamicResource Local.SettingsTitle}"
+				VerticalAlignment="Center"/>
 		</Panel>
 		
-		<!---->
+		<!--WiFi Positioning toggle-->
 		<Border>
-			<Panel x:Name="pnl_WifiToggle" HorizontalAlignment="{Binding ControlAlingment}">
-				<TextBlock>
-					Wifi positioning toggle
-				</TextBlock>
-			</Panel>			
+			<StackPanel x:Name="pnl_WifiToggle">
+				<TextBlock Text="{DynamicResource Local.WiFiPosToggle}"/>
+				<!--will re-add when not broken-->
+				<!--<ToggleSwitch x:Name="TGLSW_WiFiPos" OffContent="" OnContent=""
+						HorizontalAlignment="Right" Margin="4"
+						VerticalAlignment="Center"/>-->
+						
+				<ToggleButton x:Name="tglsw_WifiPos" HorizontalAlignment="Center"
+					Width="100" Command="{Binding Command_ToggleWiFiPos}"
+					CommandParameter="{Binding $self}"
+					>
+					
+					<Panel HorizontalAlignment="Center">
+						<TextBlock Text="{DynamicResource Local.Enabled}"
+							IsVisible="{Binding #tglsw_WifiPos.IsChecked}"/>
+						
+						<TextBlock Text="{DynamicResource Local.Disabled}"
+							IsVisible="{Binding !#tglsw_WifiPos.IsChecked}"/>
+					</Panel>
+				</ToggleButton>
+			</StackPanel>
 		</Border>
-		
-		<!---->
-		<Border>
-			<Panel x:Name="pnl_Alignment" HorizontalAlignment="{Binding ControlAlingment}">
-				<TextBlock>
-					Alignment
-				</TextBlock>
-			</Panel>			
+
+		<!--Go back area-->
+		<Border VerticalAlignment="Bottom" Margin="0,80,0,0">
+			<StackPanel>				
+				<TextBlock Text="{DynamicResource Local.Return}"/>
+				
+				<Button MaxHeight="100" MaxWidth="100" Width="90" Height="90" 
+						Padding="2" Command="{Binding Command_GoBack}"
+						CommandParameter="{Binding $parent[UserControl]}">
+					<Image Source="avares://FindARoute/Assets/Icons/Arrow-Left.png"/>
+				</Button>
+			</StackPanel>
 		</Border>
 		
 	</StackPanel>

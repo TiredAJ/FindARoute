@@ -17,6 +17,11 @@
 			<Setter Property="Background" Value="HotPink"/>
 			<Setter Property="HorizontalAlignment" Value="Center"/>
 			<Setter Property="Margin" Value="5"/>
+
+			<Style Selector="^.Title">
+				<Setter Property="FontSize" Value="32"/>
+				<Setter Property="FontWeight" Value="Bold"/>
+			</Style>
 		</Style>
 	</UserControl.Styles>
 
@@ -24,7 +29,7 @@
 	<StackPanel x:Name="STKPNL_Main" Background="Orange">
 		
 		<!--Header-->
-		<DockPanel x:Name="DKPNL_Header" Background="Yellow">
+		<DockPanel x:Name="DKPNL_Header" Background="Yellow" LastChildFill="True">
 			<Image x:Name="IMG_Logo" Margin="2" Stretch="Fill" MaxHeight="80" MaxWidth="80"
 				DockPanel.Dock="Left" Width="60" Height="60"
 				Source="/Assets/Logo.png"/>
@@ -35,8 +40,8 @@
 					Command="{Binding Command_ChangeLang}" 
 					CommandParameter="{Binding $parent[UserControl]}">
 				<Panel>
-					<Image x:Name="pbx_LangRep" Source="/Assets/Default.png"/>
 					<TextBlock x:Name="btn_txt_Lang" Text="{Binding Language}" FontStyle="Oblique"/>
+					<Image x:Name="pbx_LangRep" Source="{Binding LangFlag}"/>
 				</Panel>
 			</Button>
 
@@ -44,11 +49,21 @@
 					DockPanel.Dock="Right" Margin="5" Background="AliceBlue"
 					Width="60" Height="60" Padding="0"
 					Command="{Binding Command_OpenSettings}" CommandParameter="{Binding $parent[UserControl]}">
-				<TextBlock TextAlignment="Center" Width="{Binding $parent.Width}"
-						Height="20">
-					Settings
-				</TextBlock>
+				<Panel Width="{Binding $parent.Width}">
+					<!--<TextBlock TextAlignment="Center" Width="{Binding $parent.Width}"
+							Height="20">
+						Settings
+					</TextBlock>-->
+					
+					<Image x:Name="pbx_Settings" Source="avares://FindARoute/Assets/Icons/Settings.png"
+						   />					
+				</Panel>
 			</Button>
+
+			<Panel HorizontalAlignment="Center" VerticalAlignment="Center">
+				<TextBlock Text="{DynamicResource Local.HomeTitle}"
+					Classes="Title" TextAlignment="Center" Height="35"/>
+			</Panel>
 			
 		</DockPanel>
 	

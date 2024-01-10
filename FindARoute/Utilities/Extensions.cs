@@ -2,6 +2,7 @@
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Avalonia.Threading;
+using FindARoute.ViewModels;
 using MsBox.Avalonia.Base;
 using MsBox.Avalonia.Enums;
 using System;
@@ -60,6 +61,17 @@ namespace FindARoute.Utilities
                     { _PBX.Source = new Bitmap(S); }
                 });
             });
+        }
+
+        public static MainWindowViewModel? GetParentContext(object? _Sender)
+        {
+            var View = _Sender as UserControl;
+
+            if (View != null && View.Parent != null &&
+                (View.Parent.DataContext as MainWindowViewModel) != null)
+            { return View.Parent.DataContext as MainWindowViewModel; }
+            else
+            { return null; }
         }
     }
 
