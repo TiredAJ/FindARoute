@@ -23,6 +23,8 @@ jobs:
     - name: Restore dependencies
       run: dotnet restore ./FindARoute.sln
     - name: Build
-      run: dotnet build ./FindARoute.sln --no-restore
+      run: 
+          dotnet workload restore
+          dotnet build ./FindARoute.sln --no-restore
     - name: Test
       run: dotnet test ./FindARoute.sln --no-build --verbosity normal
