@@ -1,24 +1,41 @@
-﻿<Project Sdk="Microsoft.NET.Sdk">
+<Project Sdk="Microsoft.NET.Sdk">
   <PropertyGroup>
     <OutputType>Exe</OutputType>
-    <TargetFramework>net7.0-android</TargetFramework>
+    <TargetFramework>net8.0-android34.0</TargetFramework>
     <SupportedOSPlatformVersion>21</SupportedOSPlatformVersion>
     <Nullable>enable</Nullable>
-    <ApplicationId>com.CompanyName.AvaloniaTest</ApplicationId>
-    <ApplicationVersion>1</ApplicationVersion>
-    <ApplicationDisplayVersion>1.0</ApplicationDisplayVersion>
+    <ApplicationId>com.TiredAJ.FindARoute</ApplicationId>
+    <ApplicationVersion>30</ApplicationVersion>
+    <ApplicationDisplayVersion>0.3</ApplicationDisplayVersion>
     <AndroidPackageFormat>apk</AndroidPackageFormat>
     <AndroidEnableProfiledAot>False</AndroidEnableProfiledAot>
+    <ApplicationIcon>Logo.ico</ApplicationIcon>
   </PropertyGroup>
-
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Debug|AnyCPU'">
+    <AndroidKeyStore>False</AndroidKeyStore>
+  </PropertyGroup>
+  <PropertyGroup Condition="'$(Configuration)|$(Platform)'=='Release|AnyCPU'">
+    <AndroidKeyStore>False</AndroidKeyStore>
+  </PropertyGroup>
   <ItemGroup>
-    <AndroidResource Include="Icon.png">
-      <Link>Resources\drawable\Icon.png</Link>
-    </AndroidResource>
+    <None Remove="Icon.png" />
+    <None Remove="Logo.ico" />
+    <None Remove="Logo.png" />
   </ItemGroup>
 
   <ItemGroup>
-    <PackageReference Include="Avalonia.Android" Version="11.0.6" />
+    <AvaloniaResource Include="Logo.png" />
+    <AvaloniaResource Include="Resources\drawable\Logo.png" />
+  </ItemGroup>
+
+  <ItemGroup>
+    <Resource Include="Logo.ico">
+      <CopyToOutputDirectory>PreserveNewest</CopyToOutputDirectory>
+    </Resource>
+  </ItemGroup>
+
+  <ItemGroup>
+    <PackageReference Include="Avalonia.Android" Version="$(AvaloniaVersion)" />
     <PackageReference Include="Xamarin.AndroidX.Core.SplashScreen" Version="1.0.1.5" />
   </ItemGroup>
 
