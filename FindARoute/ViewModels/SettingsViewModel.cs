@@ -1,3 +1,5 @@
+// Ignore Spelling: MWVM
+
 using Avalonia.Controls.Primitives;
 using FindARoute.Utilities;
 using ReactiveUI;

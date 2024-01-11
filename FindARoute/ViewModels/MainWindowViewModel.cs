@@ -1,4 +1,6 @@
-﻿using Avalonia.Markup.Xaml.Styling;
+﻿// Ignore Spelling: Langs
+
+using Avalonia.Markup.Xaml.Styling;
 using FindARoute.Utilities;
 using ReactiveUI;
 using System;

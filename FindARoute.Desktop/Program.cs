@@ -1,4 +1,6 @@
-﻿using Avalonia;
+﻿// Ignore Spelling: Avalonia
+
+using Avalonia;
 using Avalonia.ReactiveUI;
 
 using System;
