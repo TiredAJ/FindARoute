@@ -9,8 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.Android", "FindA
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.Desktop", "FindARoute.Desktop\FindARoute.Desktop.csproj", "{C27A6BEE-C5A5-409D-83F9-1EA8C3DC9F77}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.iOS", "FindARoute.iOS\FindARoute.iOS.csproj", "{9A42CE4A-D974-4804-B719-EB04143A25CF}"
-EndProject
+CommentProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.iOS", "FindARoute.iOS\FindARoute.iOS.csproj", "{9A42CE4A-D974-4804-B719-EB04143A25CF}"
+CommentEndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
