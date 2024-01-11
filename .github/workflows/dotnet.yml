@@ -21,7 +21,9 @@ jobs:
       with:
         dotnet-version: 8.0.x
     - name: Restore dependencies
-      run: dotnet restore ./FindARoute.sln
+      run:
+          dotnet workload restore
+          dotnet restore ./FindARoute.sln
     - name: Build
       run: 
           dotnet workload restore
