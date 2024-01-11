@@ -1,0 +1,41 @@
+﻿
+<ResourceDictionary xmlns="https://github.com/avaloniaui"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+                    xmlns:system="clr-namespace:System;assembly=System.Runtime">
+    <system:String x:Key="Local.Change_Lang">Newid Iaith</system:String>
+    <system:String x:Key="Local.Destination">Cyrchfan</system:String>
+    <system:String x:Key="Local.Origin">Tarddiad</system:String>
+    <system:String x:Key="Local.TypeHere">Teipiwch I chilio...</system:String>
+    <system:String x:Key="Local.FindRoute">Darganfod llwybr</system:String>
+    <system:String x:Key="Local.NavingTo">Mordwyo I:</system:String>
+    <system:String x:Key="Local.ContinueForward">Parhau ymlaen</system:String>
+    <system:String x:Key="Local.Until">tan</system:String>
+    <system:String x:Key="Local.Then">, then</system:String>
+    <system:String x:Key="Local.TurnLeft">Troi chwith</system:String>
+    <system:String x:Key="Local.TurnRight">Troi de</system:String>
+    <system:String x:Key="Local.Return">Dychweld</system:String>
+    <system:String x:Key="Local.LocateMe">Lleoli fi</system:String>
+    <system:String x:Key="Local.ReLocateMe">Ad-lleoli fi</system:String>
+    <system:String x:Key="Local.NoResults">Does dim mesurebau gyfer mewnbwn</system:String>
+    <system:String x:Key="Local.WiFiPos">{Positioning} WiFi</system:String>
+    <system:String x:Key="Local.InitPopup">Mae'r meddalwedd hwn defnyddio WiFi I pennu ei lleoliad pan defnyddio'r meddalwedd. Yr unrhyw data I gadw bydd y chwilion olaf. bydd dim rhannu data a gall't ti defnyddio'r meddalwedd heb hwn.</system:String>
+    <system:String x:Key="Local.TogglePopup">Os hoffet ti defnyddio {Positioning} WiFi, gall't troi "Lleoliad" a caniatáu caniatâd "Lleoliad" mewn gosodiadau meddalwedd. Gall't newid hyn yn gosodiadau mewn-meddalwedd.</system:String>
+    <system:String x:Key="Local.TogglePopup_Yes">Defnyddio {Positioning} WiFi</system:String>
+    <system:String x:Key="Local.TogglePopup_No">Peidiwch defnyddio {Positioning} WiFi</system:String>
+    <system:String x:Key="Local.RoomName">Enw ystafell</system:String>
+    <system:String x:Key="Local.Junction">Cyfordd</system:String>
+    <system:String x:Key="Local.Error">Camsyniad!</system:String>
+    <system:String x:Key="Local.ElevationNearby">Bydd codwr/grisfordd yn ymyl.</system:String>
+    <system:String x:Key="Local.Go">Fynd I</system:String>
+    <system:String x:Key="Local.Floors">llawr(iau)</system:String>
+    <system:String x:Key="Local.Up">lan</system:String>
+    <system:String x:Key="Local.Down">lawr</system:String>
+    <system:String x:Key="Local.AtDestination">Bydda chi wedi cyrraedd a ei cyrchfan.</system:String>
+    <system:String x:Key="Local.NotDestination">Dim ar ei cyrchfan? Teipiwch y rhif ystafell os gwelwch yn dda.</system:String>
+    <system:String x:Key="Local.SettingsTitle">Gosodiadau </system:String>
+    <system:String x:Key="Local.WiFiPosToggle">{toggle} {positioning} WiFi</system:String>
+    <system:String x:Key="Local.HomeTitle">Cartref</system:String>
+    <system:String x:Key="Local.Enabled">Galluoged</system:String>
+    <system:String x:Key="Local.Disabled">Anabl</system:String>
+    <system:String x:Key="Local.Toggle">{Toggle}</system:String>
+</ResourceDictionary>

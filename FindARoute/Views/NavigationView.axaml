@@ -1,0 +1,84 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+             xmlns:vm="clr-namespace:FindARoute.ViewModels"
+             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             x:Class="FindARoute.Views.NavigationView"
+			 x:DataType="vm:NavigationViewModel"
+			 x:CompileBindings="True">
+	
+	<!--Styles-->
+	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="TextAlignment" Value="DetectFromContent"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="6"/>
+			<Setter Property="FontSize" Value="18"/>
+			<Style Selector="^.Title">
+				<Setter Property="FontSize" Value="25"/>
+			</Style>
+		</Style>
+		<Style Selector="Button">
+			<Setter Property="Background" Value="Lavender"/>
+			<Setter Property="MaxHeight" Value="70"/>
+			<Setter Property="MaxWidth" Value="70"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+		</Style>
+		<Style Selector="Border">
+			<Setter Property="BorderBrush" Value="Black"/>
+			<Setter Property="BorderThickness" Value="4"/>
+			<Setter Property="Margin" Value="-4, -2, -4, -2"/>
+			<Setter Property="Background" Value="Transparent"/>
+		</Style>
+		<Style Selector="Panel">
+			<Setter Property="Background" Value="Transparent"/>
+		</Style>
+	</UserControl.Styles>
+
+	<!--Main-->
+	<DockPanel Background="Orange" LastChildFill="True">
+		
+		<!--Header-->
+		<Panel DockPanel.Dock="Top" Height="60">
+			<TextBlock x:Name="txt_Header" Classes="Title"
+				Text="{DynamicResource Local.NavingTo}" FontWeight="Bold"/>
+		</Panel>
+
+		<!--Buttons-->
+		<UniformGrid Columns="2" DockPanel.Dock="Bottom" Height="175"
+				Background="Transparent">
+			<StackPanel Grid.Column="0" VerticalAlignment="Center">
+				<TextBlock Text="{DynamicResource Local.ReLocateMe}"/>
+				
+				<Button x:Name="btn_ReLocateUser" HorizontalAlignment="Center">
+					<Image Source="/Assets/LocateMe.png"/>
+				</Button>
+			</StackPanel>
+			<StackPanel Grid.Column="1" VerticalAlignment="Center">
+				<TextBlock Text="{DynamicResource Local.Return}"/>
+				
+				<Button x:Name="btn_Return" Click="btn_Click">
+					<Image Source="/Assets/Icons/Arrow-Left.png"/>
+				</Button>
+			</StackPanel>
+		</UniformGrid>
+		
+		<!--Textual Directions-->
+		<Panel DockPanel.Dock="Bottom" Height="100">
+			<Border>
+				<TextBlock Text="Continue forward" Classes="Title"
+					VerticalAlignment="Center"/>
+			</Border>
+		</Panel>
+
+		<!--Visual Directions-->
+		<Border>
+			<Image x:Name="pbx_Directions" Source="/Assets/Default.png"/>
+		</Border>
+	</DockPanel>
+	
+</UserControl>
