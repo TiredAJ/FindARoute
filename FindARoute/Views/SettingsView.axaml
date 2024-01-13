@@ -46,51 +46,75 @@
 	</UserControl.Styles>
 
 	<!--Main-->
-	<StackPanel Background="Orange" MaxWidth="1500">
-		
+	<DockPanel Background="Orange">
 		<!--Header-->
-		<Panel HorizontalAlignment="Stretch" VerticalAlignment="Top">
+		<Panel DockPanel.Dock="Top" HorizontalAlignment="Stretch" VerticalAlignment="Top">
 			<TextBlock Classes="Title" Text="{DynamicResource Local.SettingsTitle}"
 				VerticalAlignment="Center"/>
 		</Panel>
-		
+
 		<!--WiFi Positioning toggle-->
-		<Border>
+		<Border DockPanel.Dock="Top">
 			<StackPanel x:Name="pnl_WifiToggle">
 				<TextBlock Text="{DynamicResource Local.WiFiPosToggle}"/>
 				<!--will re-add when not broken-->
 				<!--<ToggleSwitch x:Name="TGLSW_WiFiPos" OffContent="" OnContent=""
 						HorizontalAlignment="Right" Margin="4"
 						VerticalAlignment="Center"/>-->
-						
+
 				<ToggleButton x:Name="tglsw_WifiPos" HorizontalAlignment="Center"
 					Width="100" Command="{Binding Command_ToggleWiFiPos}"
 					CommandParameter="{Binding $self}"
 					IsChecked="{Binding WiFiState}">
-					
+
 					<Panel HorizontalAlignment="Center">
 						<TextBlock Text="{DynamicResource Local.Enabled}"
 							IsVisible="{Binding #tglsw_WifiPos.IsChecked}"/>
-						
+
 						<TextBlock Text="{DynamicResource Local.Disabled}"
 							IsVisible="{Binding !#tglsw_WifiPos.IsChecked}"/>
 					</Panel>
 				</ToggleButton>
 			</StackPanel>
 		</Border>
+		
+		<!--Other toggle-->
+		<Border DockPanel.Dock="Top">
+			<StackPanel x:Name="pnl_Other">
+				<TextBlock Text="Spare"/>
+				<!--will re-add when not broken-->
+				<!--<ToggleSwitch x:Name="TGLSW_WiFiPos" OffContent="" OnContent=""
+						HorizontalAlignment="Right" Margin="4"
+						VerticalAlignment="Center"/>-->
+
+				<ToggleButton x:Name="tglsw_Other" HorizontalAlignment="Center"
+					Width="100" Command="{Binding Command_ToggleWiFiPos}"
+					CommandParameter="{Binding $self}"
+					IsChecked="">
+
+					<Panel HorizontalAlignment="Center">
+						<TextBlock Text="{DynamicResource Local.Enabled}"
+							IsVisible="{Binding #tglsw_Other.IsChecked}"/>
+
+						<TextBlock Text="{DynamicResource Local.Disabled}"
+							IsVisible="{Binding !#tglsw_Other.IsChecked}"/>
+					</Panel>
+				</ToggleButton>
+			</StackPanel>
+		</Border>
 
 		<!--Go back area-->
-		<Border VerticalAlignment="Bottom" Margin="0,80,0,0">
-			<StackPanel>				
+		<Border VerticalAlignment="Bottom" Margin="-4,0,-4,5"
+				DockPanel.Dock="Bottom">
+			<StackPanel>
 				<TextBlock Text="{DynamicResource Local.Return}"/>
-				
-				<Button MaxHeight="100" MaxWidth="100" Width="90" Height="90" 
+
+				<Button MaxHeight="100" MaxWidth="100" Width="90" Height="90"
 						Padding="2" Command="{Binding Command_GoBack}"
 						CommandParameter="{Binding $parent[UserControl]}">
 					<Image Source="avares://FindARoute/Assets/Icons/Arrow-Left.png"/>
 				</Button>
 			</StackPanel>
 		</Border>
-		
-	</StackPanel>
+	</DockPanel>
 </UserControl>

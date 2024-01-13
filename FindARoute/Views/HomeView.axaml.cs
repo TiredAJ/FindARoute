@@ -1,4 +1,3 @@
-using Avalonia.Interactivity;
 using Avalonia.Markup.Xaml;
 using Avalonia.ReactiveUI;
 using FindARoute.ViewModels;
@@ -24,10 +23,5 @@ public partial class HomeView : ReactiveUserControl<HomeViewModel>
         //    IMG_BTN_LocateMe.Source = Helpers.LoadFromResource(
         //    new System.Uri($"avares://FindARoute/Assets/LocateMe.png"));
         //});
-    }
-
-    public void btn_Click(object? Sender, RoutedEventArgs e)
-    {
-        (Parent.DataContext as MainWindowViewModel).Navigate();
     }
 }

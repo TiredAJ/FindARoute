@@ -48,7 +48,7 @@ namespace FindARoute.ViewModels
         }
 
         //changes view to navigation view
-        public void Navigate()
+        public void GoNavigate()
         { ContentVM = new NavigationViewModel(); }
 
         //changes view back to home view
@@ -56,7 +56,7 @@ namespace FindARoute.ViewModels
         { ContentVM = Home; }
 
         //changes view to settings menu
-        public void GoToSettings()
+        public void GoSettings()
         { ContentVM = SettingsMenu; }
         #endregion
 

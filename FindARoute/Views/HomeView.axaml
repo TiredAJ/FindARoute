@@ -23,6 +23,11 @@
 				<Setter Property="FontWeight" Value="Bold"/>
 			</Style>
 		</Style>
+		<Style Selector="Border">
+			<Setter Property="BorderBrush" Value="DarkGray"/>
+			<Setter Property="BorderThickness" Value="2"/>
+			<Setter Property="Margin" Value="4,-2,0,0"/>
+		</Style>
 	</UserControl.Styles>
 
 	<!--Main-->
@@ -30,36 +35,49 @@
 		
 		<!--Header-->
 		<DockPanel x:Name="DKPNL_Header" Background="Yellow" LastChildFill="True">
-			<Image x:Name="IMG_Logo" Margin="2" Stretch="Fill" MaxHeight="80" MaxWidth="80"
-				DockPanel.Dock="Left" Width="60" Height="60"
-				Source="/Assets/Logo.png"/>
 
-			<Button x:Name="btn_Language" HorizontalAlignment="Right" 
-					DockPanel.Dock="Right" Margin="5"
-					Background="AliceBlue" Width="60" Height="60" Padding="0"
-					Command="{Binding Command_ChangeLang}" 
-					CommandParameter="{Binding $parent[UserControl]}">
-				<Panel>
-					<TextBlock x:Name="btn_txt_Lang" Text="{Binding Language}" FontStyle="Oblique"/>
-					<Image x:Name="pbx_LangRep" Source="{Binding LangFlag}"/>
-				</Panel>
+			<!--App logo-->
+			<Button DockPanel.Dock="Left" Width="60" Height="60"
+					MaxHeight="80" MaxWidth="80" Margin="2" Padding="0"
+					>
+				<Image x:Name="IMG_Logo" Stretch="Fill" 					
+					Source="/Assets/Logo.png"/>				
 			</Button>
 
-			<Button x:Name="btn_Settings" HorizontalAlignment="Right"
-					DockPanel.Dock="Right" Margin="5" Background="AliceBlue"
-					Width="60" Height="60" Padding="0"
-					Command="{Binding Command_OpenSettings}" CommandParameter="{Binding $parent[UserControl]}">
-				<Panel Width="{Binding $parent.Width}">
-					<!--<TextBlock TextAlignment="Center" Width="{Binding $parent.Width}"
+			<!--Language button-->
+			<Border DockPanel.Dock="Right" Width="60" Height="60">
+				<Button x:Name="btn_Language" HorizontalAlignment="Stretch"
+						Background="AliceBlue" VerticalAlignment="Stretch"						
+						Padding="0" Command="{Binding Command_ChangeLang}"
+						CommandParameter="{Binding $parent[UserControl]}">
+					
+					<Panel>
+						<TextBlock x:Name="btn_txt_Lang" Text="{Binding Language}" FontStyle="Oblique"/>
+						<Image x:Name="pbx_LangRep" Source="{Binding LangFlag}"/>
+					</Panel>
+				</Button>
+			</Border>
+
+			<!--Settings button-->
+			<Border DockPanel.Dock="Right" Width="60" Height="60" >
+				<Button x:Name="btn_Settings" HorizontalAlignment="Stretch"
+						VerticalAlignment="Stretch" Padding="0" 
+						Command="{Binding Command_OpenSettings}"
+						CommandParameter="{Binding $parent[UserControl]}">
+					
+					<Panel Width="{Binding $parent.Width}">
+						<!--<TextBlock TextAlignment="Center" Width="{Binding $parent.Width}"
 							Height="20">
 						Settings
 					</TextBlock>-->
-					
-					<Image x:Name="pbx_Settings" Source="avares://FindARoute/Assets/Icons/Settings.png"
-						   />					
-				</Panel>
-			</Button>
 
+						<Image x:Name="pbx_Settings" Margin="-1"
+							Source="avares://FindARoute/Assets/Icons/Settings.png"						   />
+					</Panel>
+				</Button>
+			</Border>			
+
+			<!--Title-->
 			<Panel HorizontalAlignment="Center" VerticalAlignment="Center">
 				<TextBlock Text="{DynamicResource Local.HomeTitle}"
 					Classes="Title" TextAlignment="Center" Height="35"/>
@@ -70,25 +88,27 @@
 		<!--Origin Pane-->
 		<Panel x:Name="PNL_Origin" Background="Beige" Margin="0,90,0,0" HorizontalAlignment="Left">
 			<DockPanel Background="Aquamarine" Margin="-1,8,8,8">
-				<StackPanel DockPanel.Dock="Top" Background="Bisque"
-						Orientation="Horizontal" FlowDirection="RightToLeft">
-					
+				<DockPanel DockPanel.Dock="Top" Background="Bisque">
 					<ToggleSwitch x:Name="TGLSW_OriginToggle" OffContent="" OnContent=""
-						HorizontalAlignment="Right" Tag="Origin" Margin="4,0,0,0"/>
-					
+						HorizontalAlignment="Right" Margin="10,0,-15,0"
+						DockPanel.Dock="Right"/>
+
 					<Button HorizontalAlignment="Center" Width="30" Height="30"
-							Margin="0,0,35,0">
+							DockPanel.Dock="Right">
 						<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
 							<Image x:Name="IMG_BTN_LocateMe" MaxWidth="{Binding $parent.Width}"
 								   MaxHeight="{Binding $parent.Height}" Stretch="Fill"
 								   Source="/Assets/LocateMe.png"/>
 						</Panel>
-					</Button>					
+					</Button>
 
-					<TextBlock Margin="10,0,10,0" VerticalAlignment="Center"
-						Text="{DynamicResource Local.Origin}" FontSize="20"
-						HorizontalAlignment="Stretch"/>					
-				</StackPanel>
+					<Panel Margin="0,0,10,0"
+							Background="Aqua">
+						<TextBlock VerticalAlignment="Center" HorizontalAlignment="Center"
+							Text="{DynamicResource Local.Origin}" FontSize="20"/>
+					</Panel>
+				</DockPanel>
+				
 				<Panel DockPanel.Dock="Bottom">
 					<ComboBox x:Name="CMBX_Origin" HorizontalAlignment="Left" Width="245" Margin="2.5"
 						IsVisible="{Binding !#TGLSW_OriginToggle.IsChecked}"/>
@@ -103,11 +123,15 @@
 		<Panel x:Name="PNL_Destination" Background="Beige" Margin="0,90,0,0" Width="" HorizontalAlignment="Right">
 			<DockPanel Background="Aquamarine" Margin="8,8,-1,8">
 				<DockPanel DockPanel.Dock="Top" Background="Bisque">
-					<TextBlock Margin="10,0,20,0" VerticalAlignment="Center" FontSize="20"
-						DockPanel.Dock="Left" Text="{DynamicResource Local.Destination}"/>
-					
 					<ToggleSwitch x:Name="TGLSW_DestToggle" OffContent="" OnContent=""  HorizontalAlignment="Right"
 						DockPanel.Dock="Right" Tag="Destination"/>
+					
+					<Panel Background="Aqua" Margin="0,0,10,0">
+						<TextBlock VerticalAlignment="Center" FontSize="20"
+							Text="{DynamicResource Local.Destination}"/>
+						
+					</Panel>
+					
 				</DockPanel>
 				<Panel DockPanel.Dock="Bottom">
 					<ComboBox x:Name="CMBX_Destination" HorizontalAlignment="Left" Width="245" Margin="2.5"
@@ -126,8 +150,8 @@
 			
 			<Button x:Name="btn_Navigate" Width="150" Height="150" Margin="5,0,5,5"
 					Background="Aqua"
-					Command=""
-					Click="btn_Click">
+					Command="{Binding Command_OpenNavigation}"
+					CommandParameter="{Binding $parent[UserControl]}">
 				
 				<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
 					<Image x:Name="IMG_BTN_NavigateMe" MaxHeight="{Binding $parent.Width}"
