@@ -23,7 +23,7 @@
 				<Setter Property="FontWeight" Value="Bold"/>
 			</Style>
 		</Style>
-		<Style Selector="Border">
+		<Style Selector="Border.Header">
 			<Setter Property="BorderBrush" Value="DarkGray"/>
 			<Setter Property="BorderThickness" Value="2"/>
 			<Setter Property="Margin" Value="4,-2,0,0"/>
@@ -45,7 +45,8 @@
 			</Button>
 
 			<!--Language button-->
-			<Border DockPanel.Dock="Right" Width="60" Height="60">
+			<Border DockPanel.Dock="Right" Width="60" Height="60"
+					Classes="Header">
 				<Button x:Name="btn_Language" HorizontalAlignment="Stretch"
 						Background="AliceBlue" VerticalAlignment="Stretch"						
 						Padding="0" Command="{Binding Command_ChangeLang}"
@@ -59,7 +60,8 @@
 			</Border>
 
 			<!--Settings button-->
-			<Border DockPanel.Dock="Right" Width="60" Height="60" >
+			<Border DockPanel.Dock="Right" Width="60" Height="60" 
+					Classes="Header">
 				<Button x:Name="btn_Settings" HorizontalAlignment="Stretch"
 						VerticalAlignment="Stretch" Padding="0" 
 						Command="{Binding Command_OpenSettings}"
