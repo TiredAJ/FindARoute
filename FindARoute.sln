@@ -3,14 +3,14 @@ Microsoft Visual Studio Solution File, Format Version 12.00
 # Visual Studio Version 17
 VisualStudioVersion = 17.9.34414.90
 MinimumVisualStudioVersion = 10.0.40219.1
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute", "FindARoute\FindARoute.csproj", "{83CC96FF-E424-4B19-A5CD-0966E204FC73}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindARoute", "FindARoute\FindARoute.csproj", "{83CC96FF-E424-4B19-A5CD-0966E204FC73}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.Android", "FindARoute.Android\FindARoute.Android.csproj", "{0262E965-6481-46DA-94C0-47447C6E2E65}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindARoute.Android", "FindARoute.Android\FindARoute.Android.csproj", "{0262E965-6481-46DA-94C0-47447C6E2E65}"
 EndProject
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.Desktop", "FindARoute.Desktop\FindARoute.Desktop.csproj", "{C27A6BEE-C5A5-409D-83F9-1EA8C3DC9F77}"
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "FindARoute.Desktop", "FindARoute.Desktop\FindARoute.Desktop.csproj", "{C27A6BEE-C5A5-409D-83F9-1EA8C3DC9F77}"
 EndProject
-CommentProject("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "FindARoute.iOS", "FindARoute.iOS\FindARoute.iOS.csproj", "{9A42CE4A-D974-4804-B719-EB04143A25CF}"
-CommentEndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "NavGraph", "..\NavGraph\NavGraph\NavGraph.csproj", "{D52E79E3-F726-4217-97D6-2DE5D2A40DCF}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -31,12 +31,10 @@ Global
 		{C27A6BEE-C5A5-409D-83F9-1EA8C3DC9F77}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{C27A6BEE-C5A5-409D-83F9-1EA8C3DC9F77}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{C27A6BEE-C5A5-409D-83F9-1EA8C3DC9F77}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A42CE4A-D974-4804-B719-EB04143A25CF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
-		{9A42CE4A-D974-4804-B719-EB04143A25CF}.Debug|Any CPU.Build.0 = Debug|Any CPU
-		{9A42CE4A-D974-4804-B719-EB04143A25CF}.Debug|Any CPU.Deploy.0 = Debug|Any CPU
-		{9A42CE4A-D974-4804-B719-EB04143A25CF}.Release|Any CPU.ActiveCfg = Release|Any CPU
-		{9A42CE4A-D974-4804-B719-EB04143A25CF}.Release|Any CPU.Build.0 = Release|Any CPU
-		{9A42CE4A-D974-4804-B719-EB04143A25CF}.Release|Any CPU.Deploy.0 = Release|Any CPU
+		{D52E79E3-F726-4217-97D6-2DE5D2A40DCF}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D52E79E3-F726-4217-97D6-2DE5D2A40DCF}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D52E79E3-F726-4217-97D6-2DE5D2A40DCF}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D52E79E3-F726-4217-97D6-2DE5D2A40DCF}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -1,6 +1,7 @@
 ﻿// Ignore Spelling: Inc Popup Dialog
 
 using Avalonia.Controls;
+using Avalonia.Markup.Xaml.Styling;
 using Avalonia.Media.Imaging;
 using Avalonia.Platform;
 using Avalonia.Threading;
@@ -30,6 +31,15 @@ namespace FindARoute.Utilities
                     { _PBX.Source = new Bitmap(S); }
                 });
             });
+        }
+
+        public static string? GetStr(this ResourceInclude _R, string _Key)
+        {
+            object? T = null;
+
+            _R.TryGetResource(_Key, null, out T);
+
+            return T?.ToString();
         }
     }
 

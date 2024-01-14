@@ -70,7 +70,7 @@
 		<!--Textual Directions-->
 		<Panel DockPanel.Dock="Bottom" Height="100">
 			<Border>
-				<TextBlock Text="Continue forward" Classes="Title"
+				<TextBlock Text="{Binding DirectionStr}" Classes="Title"
 					VerticalAlignment="Center"/>
 			</Border>
 		</Panel>

@@ -65,5 +65,9 @@ namespace FindARoute.ViewModels
             if (MVM != null)
             { MVM.GoNavigate(); }
         }
+
+        public void Command_TestTextBindings(object? _Sender)
+        {
+        }
     }
 }

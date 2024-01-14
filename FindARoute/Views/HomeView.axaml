@@ -37,9 +37,9 @@
 		<DockPanel x:Name="DKPNL_Header" Background="Yellow" LastChildFill="True">
 
 			<!--App logo-->
-			<Button DockPanel.Dock="Left" Width="60" Height="60"
-					MaxHeight="80" MaxWidth="80" Margin="2" Padding="0"
-					>
+			<Button x:Name="btn_EasterEgg" DockPanel.Dock="Left" Width="60" 
+					Height="60" MaxHeight="80" MaxWidth="80" Margin="2" Padding="0"
+					Command="{Binding Command_TestTextBindings}" CommandParameter="{Binding #txt_Title}">
 				<Image x:Name="IMG_Logo" Stretch="Fill" 					
 					Source="/Assets/Logo.png"/>				
 			</Button>
@@ -81,7 +81,7 @@
 
 			<!--Title-->
 			<Panel HorizontalAlignment="Center" VerticalAlignment="Center">
-				<TextBlock Text="{DynamicResource Local.HomeTitle}"
+				<TextBlock x:Name="txt_Title" Text="{DynamicResource Local.HomeTitle}"
 					Classes="Title" TextAlignment="Center" Height="35"/>
 			</Panel>
 			

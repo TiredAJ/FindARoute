@@ -23,4 +23,8 @@
   <ItemGroup>
     <Folder Include="Assets\Langs\" />
   </ItemGroup>
+
+  <ItemGroup>
+    <ProjectReference Include="..\..\NavGraph\NavGraph\NavGraph.csproj" />
+  </ItemGroup>
 </Project>

@@ -11,8 +11,8 @@
     <system:String x:Key="Local.ContinueForward">Continue forward</system:String>
     <system:String x:Key="Local.Until">until</system:String>
     <system:String x:Key="Local.Then">, then</system:String>
-    <system:String x:Key="Local.TurnLeft">Turn left</system:String>
-    <system:String x:Key="Local.TurnRight">Turn right</system:String>
+    <system:String x:Key="Local.TurnLeft">turn left</system:String>
+    <system:String x:Key="Local.TurnRight">turn right</system:String>
     <system:String x:Key="Local.Return">Return</system:String>
     <system:String x:Key="Local.LocateMe">Locate me</system:String>
     <system:String x:Key="Local.ReLocateMe">Re-locate me</system:String>
@@ -38,4 +38,5 @@
     <system:String x:Key="Local.Enabled">Enabled</system:String>
     <system:String x:Key="Local.Disabled">Disabled</system:String>
     <system:String x:Key="Local.Toggle">toggle</system:String>
+    <system:String x:Key="Local.DirHere">Directions will be shown here.</system:String>
 </ResourceDictionary>

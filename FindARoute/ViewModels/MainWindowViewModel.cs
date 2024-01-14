@@ -36,16 +36,18 @@ namespace FindARoute.ViewModels
         //The view currently being shown
         private ReactiveObject? _ContentVM;
 
-        //premade views
-        public HomeViewModel Home { get; }
-        public SettingsViewModel SettingsMenu { get; }
-
         //used to handle view changes & updates
         public ReactiveObject? ContentVM
         {
             get => _ContentVM;
             set => this.RaiseAndSetIfChanged(ref _ContentVM, value);
         }
+
+
+        //premade views
+        public HomeViewModel Home { get; }
+        public SettingsViewModel SettingsMenu { get; }
+
 
         //changes view to navigation view
         public void GoNavigate()
@@ -84,9 +86,9 @@ namespace FindARoute.ViewModels
         /// <summary>
         /// Cycles to next language
         /// </summary>
-        /// <returns>Display name of language</returns>
+        /// <returns>Native name of language & it's code</returns>
         public (string Name, string Code) ChangeLang()
-        {//Based on timunie's work:
+        {//Based on timunie's sample:
          //https://github.com/timunie/Tims.Avalonia.Samples/tree/main/src/LocalizationSample
 
             //gets code of language now cycling to
