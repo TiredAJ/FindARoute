@@ -1,0 +1,81 @@
+<UserControl xmlns="https://github.com/avaloniaui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+             xmlns:d="http://schemas.microsoft.com/expression/blend/2008"
+             xmlns:mc="http://schemas.openxmlformats.org/markup-compatibility/2006"
+			 xmlns:vm="clr-namespace:FindARoute.ViewModels"
+			 xmlns:ui="using:FluentAvalonia.UI.Controls"
+             mc:Ignorable="d" d:DesignWidth="360" d:DesignHeight="800"
+             x:Class="FindARoute.Views.LoadingView"
+			 x:DataType="vm:LoadingViewModel"
+			 x:CompileBindings="True"
+			 Background="Green">
+
+
+	<!--Styles-->
+	<UserControl.Styles>
+		<Style Selector="TextBlock">
+			<Setter Property="Foreground" Value="Black"/>
+			<Setter Property="TextAlignment" Value="Center"/>
+			<Setter Property="TextWrapping" Value="Wrap"/>
+			<Setter Property="Background" Value="HotPink"/>
+			<Setter Property="HorizontalAlignment" Value="Center"/>
+			<Setter Property="Margin" Value="5"/>
+			<Setter Property="FontSize" Value="18"/>
+			<Setter Property="VerticalAlignment" Value="Center"/>
+
+			<Style Selector="^.Title">
+				<Setter Property="FontSize" Value="30"/>
+				<Setter Property="FontWeight" Value="Bold"/>
+				<Setter Property="HorizontalAlignment" Value="Center"/>
+				<Setter Property="TextAlignment" Value="Center"/>
+			</Style>
+		</Style>
+		<Style Selector="StackPanel">
+			<Setter Property="HorizontalAlignment" Value="Stretch"/>
+			<Setter Property="Background" Value="Orange"/>
+		</Style>
+	</UserControl.Styles>
+	
+	
+	<DockPanel HorizontalAlignment="Stretch" VerticalAlignment="Stretch" 
+				LastChildFill="True" Margin="0" Background="Orange">
+		<Border Margin="0,35,0,0" DockPanel.Dock="Top">
+			<TextBlock Classes="Title" Width="{Binding $parent.Width}"
+				Text="Calculating a route..." VerticalAlignment="Center"/>
+		</Border>
+
+		<Border Margin="0,200,0,0" DockPanel.Dock="Bottom">
+			<!--<ui:ProgressRing IsIndeterminate="True" BorderThickness="15" 
+				Foreground="Aqua" Width="100" Height="100"/>!-->
+		</Border>
+		
+		<StackPanel Background="LightCyan">
+			<Border Background="LightCoral" Padding="" Margin="0,35,0,0">
+				<TextBlock x:Name="txt_FoxFact" Text="{Binding FactStr}" 
+						Background="AliceBlue" FontSize="22">
+					Foxes are cool!
+				</TextBlock>
+			</Border>
+
+			<StackPanel HorizontalAlignment="Right">
+				<TextBlock x:Name="txt_Source" Text="{Binding Source}" HorizontalAlignment="Stretch">
+						- Source
+				</TextBlock>
+				
+				<Button x:Name="btn_Source" Command="{Binding OpenHyperlink}"
+						HorizontalAlignment="Stretch" Background="Chartreuse"
+						Padding="2" Margin="4">
+					<StackPanel Orientation="Horizontal" Background="Chartreuse">
+						<TextBlock Text="Source" HorizontalAlignment="Stretch" 
+								FontStyle="Italic" Margin="0"
+								Background="Transparent"/>
+						<TextBlock Text="↗" Margin="0" FontWeight="Bold"
+								FontSize="20" Background="Transparent"/>
+						
+					</StackPanel>
+				</Button>
+
+			</StackPanel>
+		</StackPanel>		
+	</DockPanel>  
+</UserControl>

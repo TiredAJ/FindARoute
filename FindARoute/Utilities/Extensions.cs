@@ -46,7 +46,7 @@ namespace FindARoute.Utilities
     public class Helpers
     {
         public static Uri DefaultImage =
-            new Uri("avares://FindARoute/Assets/Default.png");
+            new Uri("avares://FindARoute/Assets/Images/Default.png");
 
         public static Bitmap LoadFromResource(Uri _Resource)
         {

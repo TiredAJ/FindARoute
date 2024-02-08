@@ -1,13 +1,13 @@
-using Avalonia.Markup.Xaml.Styling;
-using FindARoute.Utilities;
 using ReactiveUI;
+using System;
 using System.Collections.Generic;
-using System.Linq;
 
 namespace FindARoute.ViewModels
 {
     public class NavigationViewModel : ReactiveObject
     {
+        public event EventHandler RouteFound;
+
         private Dictionary<string, string> DirComps = new()
         {
             {"ContinueForward", string.Empty },
@@ -36,19 +36,28 @@ namespace FindARoute.ViewModels
 
         public NavigationViewModel()
         {
-            var R = App.Current.Resources.MergedDictionaries.Last() as ResourceInclude;
+            //temporarilty removed for other testing
 
-            foreach (var Key in DirComps.Keys)
-            {
-                string? S = R.GetStr($"Local.{Key}");
+            //var R = App.Current.Resources.MergedDictionaries.Last() as ResourceInclude;
 
-                if (S == null)
-                { throw new System.ArgumentNullException("Str component was null!"); }
+            //foreach (var Key in DirComps.Keys)
+            //{
+            //    string? S = R.GetStr($"Local.{Key}");
 
-                DirComps[Key] = S;
-            }
+            //    if (S == null)
+            //    { throw new System.ArgumentNullException("Str component was null!"); }
 
-            DirectionStr = DirComps["DirHere"];
+            //    DirComps[Key] = S;
+            //}
+
+            //DirectionStr = DirComps["DirHere"];
+        }
+
+        //temporary
+        public void FindRoute()
+        {
+            //when route found......
+            RouteFound?.Invoke(this, new EventArgs());
         }
     }
 }

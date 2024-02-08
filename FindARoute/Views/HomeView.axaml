@@ -41,7 +41,7 @@
 					Height="60" MaxHeight="80" MaxWidth="80" Margin="2" Padding="0"
 					Command="{Binding Command_TestTextBindings}" CommandParameter="{Binding #txt_Title}">
 				<Image x:Name="IMG_Logo" Stretch="Fill" 					
-					Source="/Assets/Logo.png"/>				
+					Source="/Assets/Images/Logo.png"/>				
 			</Button>
 
 			<!--Language button-->
@@ -100,7 +100,7 @@
 						<Panel Width="{Binding $parent.Width}" Height="{Binding $parent.Height}">
 							<Image x:Name="IMG_BTN_LocateMe" MaxWidth="{Binding $parent.Width}"
 								   MaxHeight="{Binding $parent.Height}" Stretch="Fill"
-								   Source="/Assets/LocateMe.png"/>
+								   Source="/Assets/Icons/LocateMe.png"/>
 						</Panel>
 					</Button>
 
