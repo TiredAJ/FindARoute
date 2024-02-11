@@ -1,4 +1,5 @@
 using Avalonia.Platform;
+using FindARoute.Utilities;
 using Microsoft.Maui.ApplicationModel;
 using ReactiveUI;
 using System;
@@ -76,4 +77,12 @@ public class LoadingViewModel : ReactiveObject
 
     //thanks to nref -> https://github.com/AvaloniaUI/Avalonia/discussions/6664#discussioncomment-6818812
     public async Task OpenHyperlink() => await Browser.OpenAsync(Link);
+
+    public void GoBack(object? Sender)
+    {
+        var MVM = Helpers.GetParentContext(Sender);
+
+        if (MVM != null)
+        { MVM.GoHome(); }
+    }
 }

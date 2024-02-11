@@ -48,6 +48,13 @@
 			<!--<ui:ProgressRing IsIndeterminate="True" BorderThickness="15" 
 				Foreground="Aqua" Width="100" Height="100"/>!-->
 		</Border>
+
+		<Button DockPanel.Dock="Bottom" HorizontalAlignment="Center"
+				Background="DarkOrchid" Width="130" Height="100"
+				FontSize="20" Margin="25" Command="{Binding GoBack}"
+					CommandParameter="{Binding $parent[UserControl]}">
+			Return
+		</Button>
 		
 		<StackPanel Background="LightCyan">
 			<Border Background="LightCoral" Padding="" Margin="0,35,0,0">

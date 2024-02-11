@@ -60,6 +60,8 @@ public class MainWindowViewModel : ReactiveObject
     //changes view to LoadingView temporarily
     public void GoNavigate()
     {
+        //ContentVM = NavView;
+
         LoadingScreen.LoadFact();
 
         NavView.RouteFound += ((object? s, EventArgs e) => GoToNavView());
