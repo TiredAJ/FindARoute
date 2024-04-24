@@ -1,11 +1,16 @@
 ﻿// Ignore Spelling: Langs
 
 using Avalonia.Markup.Xaml.Styling;
+using Avalonia.Platform;
 using FindARoute.Utilities;
 using MsBox.Avalonia;
+using NavGraphTools;
 using ReactiveUI;
 using System;
+using System.Collections.Generic;
+using System.Diagnostics;
 using System.Globalization;
+using System.IO;
 using System.Linq;
 using System.Threading.Tasks;
 using System.Timers;
@@ -29,6 +34,9 @@ public class MainWindowViewModel : ReactiveObject
         //initialises the lang to english. Will remove once settings
         //properly implemented
         ChangeLang();
+
+        Task.Run(() =>
+        { LoadGraph(); });
     }
 
     /// <summary>
@@ -37,6 +45,8 @@ public class MainWindowViewModel : ReactiveObject
     public Settings _Settings { get; }
 
     private const int TIMEOUT = 60000;
+
+    private ReadonlyNavGraph NG = null;
 
     #region Navigating Views
     //The view currently being shown
@@ -62,7 +72,8 @@ public class MainWindowViewModel : ReactiveObject
     {
         //ContentVM = NavView;
 
-        LoadingScreen.LoadFact();
+        Task.Run(() =>
+        { LoadingScreen.LoadFact(); });
 
         NavView.RouteFound += ((object? s, EventArgs e) => GoToNavView());
 
@@ -95,9 +106,10 @@ public class MainWindowViewModel : ReactiveObject
     #endregion
 
     #region Localisation
+    private string[] _SupportedLanguages = null;
+
     //CultureCodes for currently supported languages
-    public readonly string[] SupportedLanguages =
-    { "en-GB", "cy-GB" };
+    public string[] SupportedLanguages { get => _SupportedLanguages; }
 
     //Current no of languages supported
     public int MaxLangs
@@ -115,6 +127,21 @@ public class MainWindowViewModel : ReactiveObject
         set => this.RaiseAndSetIfChanged(ref _Language, value);
     }
 
+    public void LoadLangs()
+    {
+        var Langs = new Uri("avares://FindARoute/Assets/Langs/LangList.txt");
+
+        List<string> LangList = new();
+
+        using (StreamReader Reader = new StreamReader(AssetLoader.Open(Langs)))
+        {
+            while (!Reader.EndOfStream)
+            { LangList.Add(Reader.ReadLine()); }
+        }
+
+        _SupportedLanguages = LangList.ToArray();
+    }
+
     /// <summary>
     /// Cycles to next language
     /// </summary>
@@ -122,6 +149,9 @@ public class MainWindowViewModel : ReactiveObject
     public (string Name, string Code) ChangeLang()
     {//Based on timunie's sample:
      //https://github.com/timunie/Tims.Avalonia.Samples/tree/main/src/LocalizationSample
+
+        if (SupportedLanguages == null)
+        { LoadLangs(); }
 
         //gets code of language now cycling to
         string TargetLang = SupportedLanguages[LanguageIndex.IncOrReset(MaxLangs)];
@@ -154,6 +184,20 @@ public class MainWindowViewModel : ReactiveObject
 
         //returns language name for display
         return (Language, TargetLang);
+    }
+    #endregion
+
+    #region NavGraph
+    private void LoadGraph()
+    {
+        Uri MapFile = new Uri("avares://FindARoute/Assets/Maps/Johnstone-5.ajson");
+
+        NG = new ReadonlyNavGraph();
+
+        using (Stream S = new StreamReader(AssetLoader.Open(MapFile)).BaseStream)
+        { NG.Deserialise(S); }
+
+        Debug.WriteLine($"Node count: {NG.CountNodes()}");
     }
     #endregion
 }

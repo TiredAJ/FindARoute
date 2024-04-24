@@ -17,6 +17,7 @@
     </ItemGroup>
   
     <ItemGroup>
+      <None Remove="Assets\Langs\LangList.txt" />
       <None Remove="Assets\LocateMe.kra" />
       <None Remove="Assets\Logo.kra" />
     </ItemGroup>
@@ -30,13 +31,9 @@
         <PackageReference Condition="'$(Configuration)' == 'Debug'" Include="Avalonia.Diagnostics" Version="11.0.8" />
         <PackageReference Include="FluentAvalonia.ProgressRing" Version="1.69.2" />
         <PackageReference Include="MessageBox.Avalonia" Version="3.1.5.1" />
-        <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.6" />
+        <PackageReference Include="Microsoft.Maui.Essentials" Version="8.0.14" />
         <PackageReference Include="SkiaSharp" Version="2.88.7" />
-		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.6" />
-    </ItemGroup>
-
-    <ItemGroup>
-        <Folder Include="Assets\Langs\" />
+		<PackageReference Include="Microsoft.Maui.Controls" Version="8.0.14" />
     </ItemGroup>
 
     <ItemGroup>
@@ -44,6 +41,10 @@
 	</ItemGroup>
 
     <ItemGroup>
-      <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.6" />
+      <PackageReference Update="Microsoft.Maui.Controls.Compatibility" Version="8.0.14" />
+    </ItemGroup>
+
+    <ItemGroup>
+      <Folder Include="Assets\Maps\" />
     </ItemGroup>
 </Project>
