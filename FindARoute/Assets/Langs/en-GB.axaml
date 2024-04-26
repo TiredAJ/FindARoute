@@ -18,7 +18,7 @@
     <system:String x:Key="Local.ReLocateMe">Re-locate me</system:String>
     <system:String x:Key="Local.NoResults">No results found for input</system:String>
     <system:String x:Key="Local.Wi-FiPos">Wi-Fi Positioning</system:String>
-    <system:String x:Key="Local.InitPopup">This app uses Wi-Fi to determine your position while using the app. The only data saved is your last inputted searches. No data is shared & the app is usable without this.</system:String>
+    <system:String x:Key="Local.InitPopup">This app uses Wi-Fi to determine your position while using the app. The only data saved is your last inputted searches. No data is shared &amp; the app is usable without this.</system:String>
     <system:String x:Key="Local.TogglePopup">If you would like to use Wi-Fi positioning, please turn on "Location" and allow the "Location" permission in app settings. This can be changed later in in-app settings.</system:String>
     <system:String x:Key="Local.TogglePopup_Yes">Use Wi-Fi Positioning</system:String>
     <system:String x:Key="Local.TogglePopup_No">Don't use Wi-Fi Positioning</system:String>
